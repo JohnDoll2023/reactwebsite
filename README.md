@@ -11,4 +11,4 @@ So, January 10, 2025 offically marks the birth of the third version of my websit
 
 I'm also using this as an opportunity to learn more about GitHub Actions and the robustness of GitHub in general. In my current role at Lutron Electronics, I am a devops engineer, but we don't use Github, so I'm excited to learn more about it.
 
-test readme
+test readme 2
