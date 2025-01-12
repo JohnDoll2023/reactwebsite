@@ -1,5 +1,7 @@
 ## Welcome to my personal website 3.0 ##
 
+[![CI](https://github.com/JohnDoll2023/reactwebsite/actions/workflows/testActions.yml/badge.svg)](https://github.com/JohnDoll2023/reactwebsite/actions/workflows/testActions.yml)
+
 I built the first version of my website in late 2020 during fall of my sophomore year of college, built solely on HTML, CSS,
 JavaScript, and Bootstrap. 
 
