@@ -1,9 +1,34 @@
 "use client";
 
 import Image from "next/image";
-import Tile from '../components/tile/Tile';
-import styles from '../components/tile/Tile.module.css';
+import EmblaCarousel from '../components/embla-carousel/EmblaCarousel';
+import "../components/embla-carousel/embla.css";
+import { EmblaOptionsType } from 'embla-carousel';
 import { useState, useEffect } from 'react';
+
+const PROJECT_SLIDES = [
+  "Website 3.0",
+  "Website 2.0",
+  "Website 1.0",
+  "COVID",
+  "Checkers"
+];
+
+const EXPERIENCE_SLIDES = [
+  "Lutron",
+  "Amazon (2022)",
+  "Amazon (2021)",
+  "Hospitality Wifi",
+  "St. Mark's",
+  "Marathon"
+];
+
+const EDUCATION_SLIDES = [
+  "University of Illinois",
+  "Miami University",
+  "Wapakoneta High School"
+];
+const OPTIONS: EmblaOptionsType = { loop: true }
 
 export default function Home() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -18,29 +43,6 @@ export default function Home() {
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
-
-  const projectTiles = [
-    "Website 3.0",
-    "Website 2.0",
-    "Website 1.0",
-    "COVID",
-    "Checkers"
-  ];
-
-  const experienceTiles = [
-    "Lutron",
-    "Amazon",
-    "Amazon",
-    "Hospitality Wifi",
-    "St. Mark's",
-    "Marathon"
-  ];
-
-  const educationTiles = [
-    "University of Illinois",
-    "Miami University",
-    "Wapakoneta High School"
-  ];
 
   return (
     <main className="flex-1 mt-3">
@@ -64,28 +66,9 @@ export default function Home() {
       {/* make two rows of tiles */}
       <h1 className="text-7xl">More about me</h1>
       <div>
-        <h2 className="text-6xl">Projects</h2>
-        <div className={`${styles.tileContainer} ${styles.projects}`}>
-          {projectTiles.concat(projectTiles).map((tile, index) => (
-            <Tile key={index} mousePos={mousePos}>{tile}</Tile>
-          ))}
-        </div>
-      </div>
-      <div>
-        <h2 className="text-6xl">Experience</h2>
-        <div className={`${styles.tileContainer} ${styles.experience}`}>
-          {experienceTiles.concat(experienceTiles).map((tile, index) => (
-            <Tile key={index} mousePos={mousePos}>{tile}</Tile>
-          ))}
-        </div>
-      </div>
-      <div>
-        <h2 className="text-6xl">Education</h2>
-        <div className={`${styles.tileContainer} ${styles.education}`}>
-          {educationTiles.concat(educationTiles).map((tile, index) => (
-            <Tile key={index} mousePos={mousePos}>{tile}</Tile>
-          ))}
-        </div>
+        <EmblaCarousel slides={EXPERIENCE_SLIDES} options={OPTIONS} />
+        <EmblaCarousel slides={PROJECT_SLIDES} options={OPTIONS} />
+        <EmblaCarousel slides={EDUCATION_SLIDES} options={OPTIONS} />
       </div>
     </main>
   );
