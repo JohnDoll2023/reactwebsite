@@ -15,8 +15,12 @@ type PropType = {
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props
+  const [isMobile, setIsMobile] = useState(false)
+  const isEducation = slides.length === 3
+
+  // Adjust AutoScroll behavior based on isEducation and isMobile
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-    AutoScroll({ playOnInit: true })
+    AutoScroll({ playOnInit: isEducation ? isMobile : true })
   ])
   const [isPlaying, setIsPlaying] = useState(false)
 
@@ -64,6 +68,16 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       .on('reInit', () => setIsPlaying(autoScroll.isPlaying()))
   }, [emblaApi])
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768) // Adjust breakpoint as needed
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   return (
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
@@ -78,22 +92,25 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         </div>
       </div>
 
-      <div className="embla__controls">
-        <div className="embla__buttons">
-          <PrevButton
-            onClick={() => onButtonAutoplayClick(onPrevButtonClick)}
-            disabled={prevBtnDisabled}
-          />
-          <NextButton
-            onClick={() => onButtonAutoplayClick(onNextButtonClick)}
-            disabled={nextBtnDisabled}
-          />
-        </div>
+      {/* Hide controls if isEducation is true and not on mobile */}
+      {!isEducation || isMobile ? (
+        <div className="embla__controls">
+          <div className="embla__buttons">
+            <PrevButton
+              onClick={() => onButtonAutoplayClick(onPrevButtonClick)}
+              disabled={prevBtnDisabled}
+            />
+            <NextButton
+              onClick={() => onButtonAutoplayClick(onNextButtonClick)}
+              disabled={nextBtnDisabled}
+            />
+          </div>
 
-        <button className="embla__play" onClick={toggleAutoplay} type="button">
-          {isPlaying ? 'Stop' : 'Start'}
-        </button>
-      </div>
+          <button className="embla__play" onClick={toggleAutoplay} type="button">
+            {isPlaying ? 'Stop' : 'Start'}
+          </button>
+        </div>
+      ) : null}
     </div>
   )
 }
