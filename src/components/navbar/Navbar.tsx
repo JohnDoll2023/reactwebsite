@@ -57,9 +57,9 @@ export const Navbar = () => {
                         height={50}
                     />
                 </Link>
-                <li>
-                        <Link href="/" className="mx-10">John Doll</Link>
-                    </li>
+                <li className="text-lg">
+                    <Link href="/" className="mx-10">John Doll</Link>
+                </li>
                 <ul className={mobileOpen ? "open" : ""}>
                     
                     <li>

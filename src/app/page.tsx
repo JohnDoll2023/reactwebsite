@@ -46,8 +46,8 @@ export default function Home() {
 
   return (
     <main className="flex-1 mt-3">
-      <div className="flex flex-row">
-        <div>
+      <div className="flex flex-row w-full">
+        <div className="basis-[30%] flex-shrink-0 px-1">
           <Image
             className="rounded-md"
             src="/doll.jpg"
@@ -57,8 +57,8 @@ export default function Home() {
             priority
           />
         </div>
-        <div id="intro-text"> 
-          My name is John Doll and I graduated from Miami University with a Bachelor of Science in Computer Science in May 2023.
+        <div id="intro-text" className="text-3xl basis-[70%] px-2 font-bold font-mono">
+          My name is John Doll and I graduated from Miami University with a B.S. in Computer Science in May 2023.
           I started full-time with Lutron Electronics in Boynton Beach, Florida as a Systems Infrastructure Developer in June 2023. I started my pursuit of a Master's 
           in Computer Science at the University of Illinois in Fall 2024.
         </div>
