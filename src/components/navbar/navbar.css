@@ -43,6 +43,7 @@ nav ul {
     margin: 0;
     height: 60px;
     align-items: center;
+    font-size: large;
 }
 
 nav li {
