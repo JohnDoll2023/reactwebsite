@@ -24,7 +24,13 @@
 .embla__container {
     display: flex;
     touch-action: pan-y pinch-zoom;
-    margin-left: calc(var(--slide-spacing) * -1);
+    /* margin-left: calc(var(--slide-spacing) * -1); */
+}
+.embla__container--education {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  /* margin-left: calc(var(--slide-spacing) * -1); */
+  justify-content: center;
 }
 .embla__slide {
     transform: translate3d(0, 0, 0);
@@ -34,7 +40,7 @@
     /* border-color: blue; */
     border-width: 1px;
     border-radius: 2rem;
-    margin-inline: 1rem;
+    margin-left: 1%;
 }
 .embla__slide__number {
     box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
