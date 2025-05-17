@@ -1,15 +1,13 @@
 "use client";
 
-import Link from 'next/link';
-import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export const Navbar = () => {
-    // Track which dropdown is open
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
     const [mobileOpen, setMobileOpen] = useState(false);
 
-    // Dropdown menu data
     const dropdowns = {
         projects: [
             { href: "/projects/website3", label: "Website 3.0" },
@@ -19,27 +17,18 @@ export const Navbar = () => {
             { href: "/projects/checkers", label: "Checkers" },
             { href: "/projects/dailytennis", label: "Daily Tennis" },
         ],
-        resume: [
-            { href: "/resume/pdf", label: "PDF Resume" },
-            { href: "/resume/skills", label: "Skills" },
-            { href: "/resume/awards", label: "Awards" },
-        ],
         education: [
-            { href: "/education/illinois", label: "Illinois" },
-            { href: "/education/miami", label: "Miami" },
-            { href: "/education/wapak", label: "Wapak HS" },
+            { href: "/education/illinois", label: "University of Illinois" },
+            { href: "/education/miami", label: "Miami University" },
+            { href: "/education/wapak", label: "Wapak High School" },
         ],
         experience: [
             { href: "/experience/lutron", label: "Lutron" },
             { href: "/experience/amazon2022", label: "Amazon (2022)" },
             { href: "/experience/amazon2021", label: "Amazon (2021)" },
             { href: "/experience/hw", label: "Hospitality Wifi" },
-        ],
-        "1SE": [
-            { href: "/1se/2023", label: "2023" },
-            { href: "/1se/2024", label: "2024" },
-            { href: "/1se/about", label: "About 1SE" },
-        ],
+            { href: "/experience/marathon", label: "Marathon" },
+        ]
     };
 
     // Helper to render dropdown
@@ -53,9 +42,12 @@ export const Navbar = () => {
         </ul>
     );
 
+    // Detect mobile
+    const isMobile = typeof window !== "undefined" && window.innerWidth <= 1000;
+
     return (
         <nav>
-            <div className="nav-content" style={{ display: "flex", alignItems: "center", width: "100%" }}>
+            <div className="nav-content">
                 <Link href="/" className="mx-10">
                     <Image
                         className="rounded-md"
@@ -65,25 +57,51 @@ export const Navbar = () => {
                         height={50}
                     />
                 </Link>
+                <li>
+                        <Link href="/" className="mx-10">John Doll</Link>
+                    </li>
                 <ul className={mobileOpen ? "open" : ""}>
+                    
                     <li>
-                        <Link href="/" className="">John Doll</Link>
+                        <Link href="/" className="mx-10">Home</Link>
                     </li>
-                    <li>
-                        <Link href="/" className="">Home</Link>
-                    </li>
-                    {/* Dropdown items start here */}
                     {Object.keys(dropdowns).map((key) => (
                         <li
                             key={key}
                             className=""
-                            onMouseEnter={() => setOpenDropdown(key)}
-                            onMouseLeave={() => setOpenDropdown(null)}
+                            onMouseEnter={() => !mobileOpen && setOpenDropdown(key)}
+                            onMouseLeave={() => !mobileOpen && setOpenDropdown(null)}
                         >
-                            <Link href={`/${key}`} className="mx-10 capitalize">{key}</Link>
-                            {openDropdown === key && renderDropdown(key)}
+                            <button
+                                className="mx-10 capitalize"
+                                style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    background: "none",
+                                    border: "none",
+                                    cursor: "pointer",
+                                    width: "100%",
+                                    padding: 0,
+                                }}
+                                onClick={() => {
+                                    if (mobileOpen) {
+                                        setOpenDropdown(openDropdown === key ? null : key);
+                                    }
+                                }}
+                                type="button"
+                            >
+                                {key}
+                                <span style={{ marginLeft: 4, fontSize: "0.7em" }}>▼</span>
+                            </button>
+                            {(openDropdown === key || (!mobileOpen && openDropdown === key)) && renderDropdown(key)}
                         </li>
                     ))}
+                    <li>
+                        <Link href="/resume" className="mx-10">Resume</Link>
+                    </li>
+                    <li>
+                        <Link href="/1se" className="mx-10">1SE</Link>
+                    </li>
                     <li>
                         <Link href="/blog" className="mx-10">Blog</Link>
                     </li>
@@ -103,4 +121,4 @@ export const Navbar = () => {
             </div>
         </nav>
     );
-}
+};
