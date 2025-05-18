@@ -88,13 +88,50 @@ nav li > .mx-10 {
         display: flex !important;
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Adjust to match the height of the navbar */
+        top: 100%; /* Start at the bottom of the navbar */
         left: 0;
         width: 100vw;
         background: var(--nav-background);
         z-index: 9999; /* Ensure the menu is above everything else */
-        padding: 10px 0;
+        padding: 0; /* Remove extra padding */
+        margin: 0; /* Remove margin to avoid gaps */
     }
+
+    .nav-content ul.open li {
+        width: 100%; /* Ensure the list items span the full width */
+        padding: 0; /* Remove padding from the li */
+        margin: 0; /* Remove margin to avoid gaps */
+        box-sizing: border-box; /* Include padding in the width */
+        background: var(--nav-background); /* Ensure background covers the item */
+        border-bottom: 1px solid #1e3a2f; /* Add a consistent border between items */
+        height: 50px; /* Set a consistent height for all items */
+        display: flex; /* Ensure content is vertically aligned */
+        align-items: center; /* Center content vertically */
+    }
+
+    .nav-content ul.open li:last-child {
+        border-bottom: none; /* Remove the border for the last item */
+    }
+
+    .nav-content ul.open li a,
+    .nav-content ul.open li button {
+        display: block;
+        width: 100%;
+        padding: 0 10px; /* Add consistent padding inside the link or button */
+        text-align: left;
+        color: white;
+        text-decoration: none;
+        height: 100%; /* Ensure the link or button spans the full height of the li */
+        line-height: 50px; /* Vertically center text */
+        background: none; /* Remove default button background */
+        border: none; /* Remove default button border */
+        cursor: pointer; /* Add pointer cursor for buttons */
+    }
+
+    .nav-content ul.open li:hover {
+        background: #1e3a2f; /* Optional: Add a hover effect */
+    }
+
     .hamburger {
         display: flex;
     }
@@ -107,33 +144,18 @@ nav li > .mx-10 {
     }
 
     .dropdown {
-        display: none; /* Hide dropdowns by default */
-        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Position dropdown below the parent li */
+        left: 0;
+        width: 100%; /* Ensure dropdown spans the full width */
         background: var(--nav-background);
-        width: 100%;
-        padding: 10px 0;
+        display: none; /* Hide dropdown by default */
+        flex-direction: column;
+        z-index: 9999;
     }
 
     li.open > .dropdown {
-        display: flex; /* Show dropdown when parent is open */
-    }
-
-    .dropdown li {
-        padding: 10px 20px;
-    }
-
-    .dropdown-link {
-        display: block;
-        width: 100%;
-        text-align: left;
-        color: white;
-        text-decoration: none;
-    }
-
-    /* Show dropdown when parent is open */
-    li:hover > .dropdown,
-    li.open > .dropdown {
-        display: flex;
+        display: flex; /* Show dropdown when parent li is open */
     }
 
     .navbar-image {
@@ -188,14 +210,10 @@ nav li > .mx-10 {
     display: flex;
     align-items: center;
     justify-content: left;
-    /* background: rgb(209, 209, 209); */
-    /* min-width: 160px; */
-    /* padding: 10px 20px; */
     color: black;
     text-decoration: none;
     white-space: nowrap;
     height: 30px; /*Consistent dropdown height*/
-    /* border-radius: 5px; */
 }
 
 /* Add a line break below the "Overview" item */

@@ -44,7 +44,10 @@ export const Navbar = () => {
                     <Link
                         href={item.href}
                         className="dropdown-link"
-                        onClick={() => setOpenDropdown(null)} // Reset dropdown on navigation
+                        onClick={() => {
+                            setOpenDropdown(null); // Close dropdown
+                            setMobileOpen(false); // Close mobile menu
+                        }}
                     >
                         {item.label}
                     </Link>
@@ -70,7 +73,13 @@ export const Navbar = () => {
                 </li>
                 <ul className={`menu ${mobileOpen ? "open" : ""}`}>
                     <li>
-                        <Link href="/" className="mx-5">Home</Link>
+                        <Link
+                            href="/"
+                            className="mx-5"
+                            onClick={() => setMobileOpen(false)} // Close mobile menu
+                        >
+                            Home
+                        </Link>
                     </li>
                     {Object.keys(dropdowns).map((key) => (
                         <li
@@ -102,16 +111,38 @@ export const Navbar = () => {
                         </li>
                     ))}
                     <li>
-                        <Link href="/resume" className="mx-5">Resume</Link>
+                        <Link
+                            href="/resume"
+                            className="mx-5"
+                            onClick={() => setMobileOpen(false)} // Close mobile menu
+                        >
+                            Resume
+                        </Link>
                     </li>
                     <li>
-                        <Link href="/1se" className="mx-5">1SE</Link>
+                        <Link
+                            href="/1se"
+                            className="mx-5"
+                            onClick={() => setMobileOpen(false)} // Close mobile menu
+                        >
+                            1SE
+                        </Link>
                     </li>
                     <li>
-                        <Link href="/contact" className="mx-5">Contact</Link>
+                        <Link
+                            href="/contact"
+                            className="mx-5"
+                            onClick={() => setMobileOpen(false)} // Close mobile menu
+                        >
+                            Contact
+                        </Link>
                     </li>
                 </ul>
-                <button className="hamburger mr-2" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
+                <button
+                    className="hamburger mr-2"
+                    onClick={() => setMobileOpen(!mobileOpen)}
+                    aria-label="Toggle menu"
+                >
                     <span />
                     <span />
                     <span />
