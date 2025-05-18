@@ -101,27 +101,11 @@ nav li > .mx-10 {
     #name {
         margin: 0 auto; /* Center the list item horizontally */
         text-align: center; /* Center the text */
-        width: 100vh; /* Ensure it spans the full width */
+        width: 70%; /* Ensure it spans the full width */
         align-items: center;
         flex-direction: column;
     }
-}
 
-/* Default: dropdown is absolutely positioned */
-.dropdown {
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgb(209, 209, 209);
-    min-width: 160px;
-    z-index: 100;
-    padding: 0;
-    margin: 0;
-}
-
-/* Hamburger menu: dropdown is static and full width */
-@media (max-width: 1000px) {
     .dropdown {
         display: none; /* Hide dropdowns by default */
         flex-direction: column;
@@ -151,12 +135,52 @@ nav li > .mx-10 {
     li.open > .dropdown {
         display: flex;
     }
+
+    .navbar-image {
+        width: 33px; /* Increase the size as needed */
+        height: 33px; /* Maintain aspect ratio */
+    }
 }
 
+/* Default: dropdown is absolutely positioned */
+.dropdown {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 160px;
+    z-index: 100;
+    padding: 10px; /* Adjust padding as needed */
+    margin: 0;
+    border-radius: 10px;
+    clip-path: inset(0 round 10px);
+    box-sizing: border-box; /* Include padding and border in size */
+    overflow: visible; /* Ensure dropdown content is not clipped */
+    height: auto; /* Allow height to adjust dynamically */
+}
+
+/* Ensure the <li> spans the full width */
 .dropdown li {
-    width: 100%;
-    height: 40px;
-    background: rgb(209, 209, 209);
+    width: 100%; /* Make the list item span the full width */
+    height: 40px; /* Set a consistent height */
+    display: flex; /* Ensure the content is aligned properly */
+    align-items: center; /* Center the content vertically */
+    padding: 0 10px; /* Add some padding for spacing */
+    box-sizing: border-box; /* Include padding in the width */
+    border-radius: 5px; /* Optional: round the corners */
+}
+
+/* Highlight the entire row and change text color on hover */
+.dropdown li:hover {
+    background: var(--nav-background); /* Use your navbar background color */
+    color: white; /* Change text color on hover */
+    cursor: pointer; /* Show a pointer cursor */
+}
+
+/* Ensure the text inside the link also turns white */
+.dropdown li:hover .dropdown-link {
+    color: white; /* Change text color to white */
 }
 
 .dropdown-link {
@@ -164,19 +188,18 @@ nav li > .mx-10 {
     display: flex;
     align-items: center;
     justify-content: left;
-    background: rgb(209, 209, 209);
-    min-width: 160px;
+    /* background: rgb(209, 209, 209); */
+    /* min-width: 160px; */
     /* padding: 10px 20px; */
     color: black;
     text-decoration: none;
     white-space: nowrap;
     height: 30px; /*Consistent dropdown height*/
+    /* border-radius: 5px; */
 }
 
-.dropdown-link:hover {
-    background: var(--nav-background);
-    color: white;
-    
-    /* round the hover effect */
-    border-radius: 10px;
+/* Add a line break below the "Overview" item */
+.dropdown li:first-child {
+    border-bottom: 1px solid #555; /* Thin gray/black line */
+    margin-bottom: 5px; /* Optional: Add spacing below the line */
 }
