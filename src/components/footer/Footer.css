@@ -1,0 +1,46 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Space between left, center, and right sections */
+    align-items: center; /* Vertically align items */
+    padding: 0 1rem; /* Add horizontal padding */
+    background-color: var(--nav-background);
+    color: #ffffff;
+    height: 60px; /* Keep the footer height consistent */
+}
+
+.footer-left {
+    flex: 1; /* Take up space on the left */
+}
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the social icons and copyright */
+    justify-content: center;
+    flex: 1; /* Center section takes up equal space */
+}
+
+.footer-right {
+    text-align: right;
+    font-size: 0.875rem; /* Slightly smaller text */
+    line-height: 1.5; /* Add spacing between lines */
+    flex: 1; /* Take up space on the right */
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Allow height to adjust */
+        padding: 1rem; /* Add padding for spacing */
+    }
+
+    .footer-center {
+        margin-bottom: 1rem; /* Add spacing between sections */
+    }
+
+    .footer-right {
+        text-align: center; /* Center-align the text */
+        flex: none; /* Remove flex behavior */
+    }
+}
