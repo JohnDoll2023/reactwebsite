@@ -50,32 +50,32 @@ export const Navbar = () => {
     return (
         <nav>
             <div className="nav-content">
-                <Link href="/" className="mx-10">
+                <Link href="/" className="mr-5 ml-2">
                     <Image
                         className="rounded-md"
                         src="/IMG_2611.jpg"
                         alt="John Doll"
-                        width={50}
-                        height={50}
+                        width={75}
+                        height={75}
                     />
                 </Link>
-                <li className="text-lg">
-                    <Link href="/" className="mx-10">John Doll</Link>
+                <li className="text-lg" id="name">
+                    <Link href="/" className="mx-5">John Doll</Link>
                 </li>
-                <ul className={mobileOpen ? "open" : ""}>
+                <ul className={`menu ${mobileOpen ? "open" : ""}`}>
                     
                     <li>
-                        <Link href="/" className="mx-10">Home</Link>
+                        <Link href="/" className="mx-5">Home</Link>
                     </li>
                     {Object.keys(dropdowns).map((key) => (
                         <li
                             key={key}
-                            className=""
+                            className={openDropdown === key ? "open" : ""}
                             onMouseEnter={() => !mobileOpen && setOpenDropdown(key as DropdownKey)}
                             onMouseLeave={() => !mobileOpen && setOpenDropdown(null)}
                         >
                             <button
-                                className="mx-10 capitalize"
+                                className="mx-5 capitalize"
                                 style={{
                                     display: "flex",
                                     alignItems: "center",
@@ -86,9 +86,7 @@ export const Navbar = () => {
                                     padding: 0,
                                 }}
                                 onClick={() => {
-                                    if (mobileOpen) {
-                                        setOpenDropdown(openDropdown === key ? null : (key as DropdownKey));
-                                    }
+                                    setOpenDropdown(openDropdown === key ? null : (key as DropdownKey)); // Toggle dropdown
                                 }}
                                 type="button"
                             >
@@ -99,23 +97,22 @@ export const Navbar = () => {
                         </li>
                     ))}
                     <li>
-                        <Link href="/resume" className="mx-10">Resume</Link>
+                        <Link href="/resume" className="mx-5">Resume</Link>
                     </li>
                     <li>
-                        <Link href="/1se" className="mx-10">1SE</Link>
+                        <Link href="/1se" className="mx-5">1SE</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link href="/blog" className="mx-10">Blog</Link>
                     </li>
                     <li>
-                        <Link href="/contact" className="mx-10">Contact</Link>
+                        <Link href="/dj" className="mx-10">DJ</Link>
+                    </li> */}
+                    <li>
+                        <Link href="/contact" className="mx-5">Contact</Link>
                     </li>
                 </ul>
-                <button
-                    className="hamburger"
-                    onClick={() => setMobileOpen(!mobileOpen)}
-                    aria-label="Toggle menu"
-                >
+                <button className="hamburger mr-2" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
                     <span />
                     <span />
                     <span />
