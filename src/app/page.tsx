@@ -75,6 +75,7 @@ export default function Home() {
         <EmblaCarousel slides={PROJECT_SLIDES} options={OPTIONS} />
         <h2 className="text-2xl md:text-5xl pt-12 pb-2">Education</h2>
         <EmblaCarousel slides={EDUCATION_SLIDES} options={OPTIONS} />
+        <br></br>
       </div>
     </main>
   );
