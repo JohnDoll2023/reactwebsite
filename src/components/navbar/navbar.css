@@ -172,6 +172,13 @@ nav li > .mx-10 {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .dropdown {
+        border: none; /* Light gray border */
+        box-shadow: none; /* Subtle shadow */
+    }
+}
+
 /* Default: dropdown is absolutely positioned */
 .dropdown {
     display: block;
@@ -188,6 +195,8 @@ nav li > .mx-10 {
     box-sizing: border-box; /* Include padding and border in size */
     overflow: visible; /* Ensure dropdown content is not clipped */
     height: auto; /* Allow height to adjust dynamically */
+    border: 1px solid #d3d3d3; /* Light gray border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Ensure the <li> spans the full width */
