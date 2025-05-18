@@ -4,35 +4,37 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+const dropdowns = {
+    projects: [
+        { href: "/projects/website3", label: "Website 3.0" },
+        { href: "/projects/website2", label: "Website 2.0" },
+        { href: "/projects/website1", label: "Website 1.0" },
+        { href: "/projects/covid", label: "COVID Dashboard" },
+        { href: "/projects/checkers", label: "Checkers" },
+        { href: "/projects/dailytennis", label: "Daily Tennis" },
+    ],
+    education: [
+        { href: "/education/illinois", label: "University of Illinois" },
+        { href: "/education/miami", label: "Miami University" },
+        { href: "/education/wapak", label: "Wapak High School" },
+    ],
+    experience: [
+        { href: "/experience/lutron", label: "Lutron" },
+        { href: "/experience/amazon2022", label: "Amazon (2022)" },
+        { href: "/experience/amazon2021", label: "Amazon (2021)" },
+        { href: "/experience/hw", label: "Hospitality Wifi" },
+        { href: "/experience/marathon", label: "Marathon" },
+    ]
+} as const;
+
+type DropdownKey = keyof typeof dropdowns;
+
 export const Navbar = () => {
-    const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+    const [openDropdown, setOpenDropdown] = useState<DropdownKey | null>(null);
     const [mobileOpen, setMobileOpen] = useState(false);
 
-    const dropdowns = {
-        projects: [
-            { href: "/projects/website3", label: "Website 3.0" },
-            { href: "/projects/website2", label: "Website 2.0" },
-            { href: "/projects/website1", label: "Website 1.0" },
-            { href: "/projects/covid", label: "COVID Dashboard" },
-            { href: "/projects/checkers", label: "Checkers" },
-            { href: "/projects/dailytennis", label: "Daily Tennis" },
-        ],
-        education: [
-            { href: "/education/illinois", label: "University of Illinois" },
-            { href: "/education/miami", label: "Miami University" },
-            { href: "/education/wapak", label: "Wapak High School" },
-        ],
-        experience: [
-            { href: "/experience/lutron", label: "Lutron" },
-            { href: "/experience/amazon2022", label: "Amazon (2022)" },
-            { href: "/experience/amazon2021", label: "Amazon (2021)" },
-            { href: "/experience/hw", label: "Hospitality Wifi" },
-            { href: "/experience/marathon", label: "Marathon" },
-        ]
-    };
-
     // Helper to render dropdown
-    const renderDropdown = (key: string) => (
+    const renderDropdown = (key: DropdownKey) => (
         <ul className="dropdown">
             {dropdowns[key].map(item => (
                 <li key={item.href}>
@@ -69,7 +71,7 @@ export const Navbar = () => {
                         <li
                             key={key}
                             className=""
-                            onMouseEnter={() => !mobileOpen && setOpenDropdown(key)}
+                            onMouseEnter={() => !mobileOpen && setOpenDropdown(key as DropdownKey)}
                             onMouseLeave={() => !mobileOpen && setOpenDropdown(null)}
                         >
                             <button
@@ -85,7 +87,7 @@ export const Navbar = () => {
                                 }}
                                 onClick={() => {
                                     if (mobileOpen) {
-                                        setOpenDropdown(openDropdown === key ? null : key);
+                                        setOpenDropdown(openDropdown === key ? null : (key as DropdownKey));
                                     }
                                 }}
                                 type="button"
@@ -93,7 +95,7 @@ export const Navbar = () => {
                                 {key}
                                 <span style={{ marginLeft: 4, fontSize: "0.7em" }}>▼</span>
                             </button>
-                            {(openDropdown === key || (!mobileOpen && openDropdown === key)) && renderDropdown(key)}
+                            {(openDropdown === key || (!mobileOpen && openDropdown === key)) && renderDropdown(key as DropdownKey)}
                         </li>
                     ))}
                     <li>

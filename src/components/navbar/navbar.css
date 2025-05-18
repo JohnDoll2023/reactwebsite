@@ -1,12 +1,7 @@
-.active {
-
-}
-
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:rgb(0, 139, 139);
 }
 
 .nav-content {
@@ -141,7 +136,7 @@ nav li > .mx-10 {
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     background: rgb(209, 209, 209);
     min-width: 160px;
     /* padding: 10px 20px; */
@@ -152,7 +147,8 @@ nav li > .mx-10 {
 }
 
 .dropdown-link:hover {
-    background: rgb(87, 212, 212);
+    background: var(--nav-background);
+    color: white;
     
     /* round the hover effect */
     border-radius: 10px;
