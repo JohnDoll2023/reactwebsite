@@ -6,6 +6,7 @@ import Image from "next/image";
 
 const dropdowns = {
     projects: [
+        { href: "/projects", label: "Projects Overview" },
         { href: "/projects/website3", label: "Website 3.0" },
         { href: "/projects/website2", label: "Website 2.0" },
         { href: "/projects/website1", label: "Website 1.0" },
@@ -14,11 +15,13 @@ const dropdowns = {
         { href: "/projects/dailytennis", label: "Daily Tennis" },
     ],
     education: [
+        { href: "/education", label: "Education Overview" },
         { href: "/education/illinois", label: "University of Illinois" },
         { href: "/education/miami", label: "Miami University" },
         { href: "/education/wapak", label: "Wapak High School" },
     ],
     experience: [
+        { href: "/experience", label: "Experience Overview" },
         { href: "/experience/lutron", label: "Lutron" },
         { href: "/experience/amazon2022", label: "Amazon (2022)" },
         { href: "/experience/amazon2021", label: "Amazon (2021)" },
@@ -38,44 +41,55 @@ export const Navbar = () => {
         <ul className="dropdown">
             {dropdowns[key].map(item => (
                 <li key={item.href}>
-                    <Link href={item.href} className="dropdown-link">{item.label}</Link>
+                    <Link
+                        href={item.href}
+                        className="dropdown-link"
+                        onClick={() => {
+                            setOpenDropdown(null); // Close dropdown
+                            setMobileOpen(false); // Close mobile menu
+                        }}
+                    >
+                        {item.label}
+                    </Link>
                 </li>
             ))}
         </ul>
     );
 
-    // Detect mobile
-    const isMobile = typeof window !== "undefined" && window.innerWidth <= 1000;
-
     return (
         <nav>
             <div className="nav-content">
-                <Link href="/" className="mx-10">
+                <Link href="/" className="mr-5 ml-2">
                     <Image
-                        className="rounded-md"
+                        className="rounded-md navbar-image"
                         src="/IMG_2611.jpg"
                         alt="John Doll"
                         width={50}
                         height={50}
                     />
                 </Link>
-                <li className="text-lg">
-                    <Link href="/" className="mx-10">John Doll</Link>
+                <li className="text-lg" id="name">
+                    <Link href="/" className="mx-5">John Doll</Link>
                 </li>
-                <ul className={mobileOpen ? "open" : ""}>
-                    
+                <ul className={`menu ${mobileOpen ? "open" : ""}`}>
                     <li>
-                        <Link href="/" className="mx-10">Home</Link>
+                        <Link
+                            href="/"
+                            className="mx-5"
+                            onClick={() => setMobileOpen(false)} // Close mobile menu
+                        >
+                            Home
+                        </Link>
                     </li>
                     {Object.keys(dropdowns).map((key) => (
                         <li
                             key={key}
-                            className=""
-                            onMouseEnter={() => !mobileOpen && setOpenDropdown(key as DropdownKey)}
-                            onMouseLeave={() => !mobileOpen && setOpenDropdown(null)}
+                            className={openDropdown === key ? "open" : ""}
+                            onMouseEnter={() => setOpenDropdown(key as DropdownKey)} // Open dropdown on hover
+                            onMouseLeave={() => setOpenDropdown(null)} // Close dropdown on mouse leave
                         >
                             <button
-                                className="mx-10 capitalize"
+                                className="mx-5 capitalize"
                                 style={{
                                     display: "flex",
                                     alignItems: "center",
@@ -83,12 +97,10 @@ export const Navbar = () => {
                                     border: "none",
                                     cursor: "pointer",
                                     width: "100%",
-                                    padding: 0,
+                                    // padding: 0,
                                 }}
                                 onClick={() => {
-                                    if (mobileOpen) {
-                                        setOpenDropdown(openDropdown === key ? null : (key as DropdownKey));
-                                    }
+                                    setOpenDropdown(openDropdown === key ? null : (key as DropdownKey)); // Toggle dropdown
                                 }}
                                 type="button"
                             >
@@ -99,20 +111,35 @@ export const Navbar = () => {
                         </li>
                     ))}
                     <li>
-                        <Link href="/resume" className="mx-10">Resume</Link>
+                        <Link
+                            href="/resume"
+                            className="mx-5"
+                            onClick={() => setMobileOpen(false)} // Close mobile menu
+                        >
+                            Resume
+                        </Link>
                     </li>
                     <li>
-                        <Link href="/1se" className="mx-10">1SE</Link>
+                        <Link
+                            href="/1se"
+                            className="mx-5"
+                            onClick={() => setMobileOpen(false)} // Close mobile menu
+                        >
+                            1SE
+                        </Link>
                     </li>
                     <li>
-                        <Link href="/blog" className="mx-10">Blog</Link>
-                    </li>
-                    <li>
-                        <Link href="/contact" className="mx-10">Contact</Link>
+                        <Link
+                            href="/contact"
+                            className="mx-5"
+                            onClick={() => setMobileOpen(false)} // Close mobile menu
+                        >
+                            Contact
+                        </Link>
                     </li>
                 </ul>
                 <button
-                    className="hamburger"
+                    className="hamburger mr-2"
                     onClick={() => setMobileOpen(!mobileOpen)}
                     aria-label="Toggle menu"
                 >
