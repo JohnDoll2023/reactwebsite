@@ -95,6 +95,8 @@ nav li > .mx-10 {
         z-index: 9999; /* Ensure the menu is above everything else */
         padding: 0; /* Remove extra padding */
         margin: 0; /* Remove margin to avoid gaps */
+        list-style: none; /* Remove default list styling */
+        gap: 0; /* Ensure no gap between flex items */
     }
 
     .nav-content ul.open li {
@@ -103,10 +105,15 @@ nav li > .mx-10 {
         margin: 0; /* Remove margin to avoid gaps */
         box-sizing: border-box; /* Include padding in the width */
         background: var(--nav-background); /* Ensure background covers the item */
-        border-bottom: 1px solid #1e3a2f; /* Add a consistent border between items */
         height: 50px; /* Set a consistent height for all items */
         display: flex; /* Ensure content is vertically aligned */
         align-items: center; /* Center content vertically */
+        border-bottom: none; /* Remove the border */
+    }
+
+    .nav-content ul.open li:not(:last-child) {
+        margin-bottom: 0; /* Ensure no margin between items */
+        box-shadow: 0 1px 0 #1e3a2f; /* Add a subtle shadow to separate items */
     }
 
     .nav-content ul.open li:last-child {
