@@ -97,7 +97,7 @@ export const Navbar = () => {
                                     border: "none",
                                     cursor: "pointer",
                                     width: "100%",
-                                    padding: 0,
+                                    // padding: 0,
                                 }}
                                 onClick={() => {
                                     setOpenDropdown(openDropdown === key ? null : (key as DropdownKey)); // Toggle dropdown

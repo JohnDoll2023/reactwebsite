@@ -51,33 +51,33 @@ nav li {
     align-items: center;
 }
 
-nav li > a,
+/* nav li > a,
 nav li > .mx-10 {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     text-align: center;
-}
+} */
 
 @media (max-width: 900px) {
-    nav ul {
+    /* nav ul {
         gap: 0.4vw;
-    }
-    nav li > a,
+    } */
+    /* nav li > a,
     nav li > .mx-10 {
         padding: 0 0.15vw;
-    }
+    } */
 }
 
 @media (max-width: 600px) {
-    nav ul {
+    /* nav ul {
         gap: 0.2vw;
-    }
-    nav li > a,
+    } */
+    /* nav li > a,
     nav li > .mx-10 {
         padding: 0 0.05vw;
-    }
+    } */
 }
 
 @media (max-width: 1000px) {
@@ -142,6 +142,7 @@ nav li > .mx-10 {
     .hamburger {
         display: flex;
     }
+    
     #name {
         margin: 0 auto; /* Center the list item horizontally */
         text-align: center; /* Center the text */
