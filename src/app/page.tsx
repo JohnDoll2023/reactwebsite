@@ -69,11 +69,11 @@ export default function Home() {
         </h1>
       </div>
       <div>
-        <h2 className="text-2xl md:text-5xl pb-2">Experience</h2>
+        <h2 className="text-2xl md:text-5xl pb-2 pl-2">Experience</h2>
         <EmblaCarousel slides={EXPERIENCE_SLIDES} options={OPTIONS} />
-        <h2 className="text-2xl md:text-5xl pt-12 pb-2">Projects</h2>
+        <h2 className="text-2xl md:text-5xl pt-12 pb-2 pl-2">Projects</h2>
         <EmblaCarousel slides={PROJECT_SLIDES} options={OPTIONS} />
-        <h2 className="text-2xl md:text-5xl pt-12 pb-2">Education</h2>
+        <h2 className="text-2xl md:text-5xl pt-12 pb-2 pl-2">Education</h2>
         <EmblaCarousel slides={EDUCATION_SLIDES} options={OPTIONS} />
         <br></br>
       </div>
