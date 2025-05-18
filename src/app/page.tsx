@@ -7,26 +7,26 @@ import { EmblaOptionsType } from 'embla-carousel';
 import { useState, useEffect } from 'react';
 
 const PROJECT_SLIDES = [
-  "Website 3.0",
-  "Website 2.0",
-  "Website 1.0",
-  "COVID",
-  "Checkers"
+  { label: "Website 3.0", link: "/projects/website3" },
+  { label: "Website 2.0", link: "/projects/website2" },
+  { label: "Website 1.0", link: "/projects/website1" },
+  { label: "COVID", link: "/projects/covid" },
+  { label: "Checkers", link: "/projects/checkers" },
 ];
 
 const EXPERIENCE_SLIDES = [
-  "Lutron",
-  "Amazon (2022)",
-  "Amazon (2021)",
-  "Hospitality Wifi",
-  "St. Mark's",
-  "Marathon"
+  { label: "Lutron", link: "/experience/lutron" },
+  { label: "Amazon (2022)", link: "/experience/amazon2022" },
+  { label: "Amazon (2021)", link: "/experience/amazon2021" },
+  { label: "Hospitality Wifi", link: "/experience/hw" },
+  { label: "St. Mark's", link: "/experience/st-marks" },
+  { label: "Marathon", link: "/experience/marathon" },
 ];
 
 const EDUCATION_SLIDES = [
-  "University of Illinois",
-  "Miami University",
-  "Wapakoneta High School"
+  { label: "University of Illinois", link: "/education/illinois" },
+  { label: "Miami University", link: "/education/miami" },
+  { label: "Wapakoneta High School", link: "/education/wapak" },
 ];
 const OPTIONS: EmblaOptionsType = { loop: true }
 
@@ -58,23 +58,24 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="flex-1 text-3xl font-bold font-mono px-2 md:basis-[60%] md:pl-6 flex items-center min-h-0">
+          <div className="flex-1 text-xl py-2 md:py-0 md:text-3xl font-bold font-mono px-2 md:basis-[60%] md:pl-6 flex items-center min-h-0">
             My name is John Doll and I graduated from Miami University with a B.S. in Computer Science in May 2023.
             I started full-time with Lutron Electronics in Boynton Beach, Florida as a Systems Infrastructure Developer in June 2023. I started my pursuit of a Master's 
             in Computer Science at the University of Illinois in Fall 2024.
           </div>
         </div>
-        <h1 className="text-7xl flex-shrink-0 w-full justify-center flex mb-2">
+        <h1 className="text-5xl py-10 md:py-0 md:text-7xl flex-shrink-0 w-full justify-center flex mb-2">
           More about me
         </h1>
       </div>
       <div>
-        <h2 className="text-5xl">Experience</h2>
+        <h2 className="text-2xl md:text-5xl pb-2 pl-2">Experience</h2>
         <EmblaCarousel slides={EXPERIENCE_SLIDES} options={OPTIONS} />
-        <h2 className="text-5xl">Projects</h2>
+        <h2 className="text-2xl md:text-5xl pt-12 pb-2 pl-2">Projects</h2>
         <EmblaCarousel slides={PROJECT_SLIDES} options={OPTIONS} />
-        <h2 className="text-5xl">Education</h2>
+        <h2 className="text-2xl md:text-5xl pt-12 pb-2 pl-2">Education</h2>
         <EmblaCarousel slides={EDUCATION_SLIDES} options={OPTIONS} />
+        <br></br>
       </div>
     </main>
   );
