@@ -5,6 +5,7 @@ import EmblaCarousel from '../components/embla-carousel/EmblaCarousel';
 import "../components/embla-carousel/embla.css";
 import { EmblaOptionsType } from 'embla-carousel';
 import { useState, useEffect } from 'react';
+import Link from "next/link";
 
 const PROJECT_SLIDES = [
   { label: "Website 3.0", link: "/projects/website3" },
@@ -59,9 +60,9 @@ export default function Home() {
             />
           </div>
           <div className="flex-1 text-xl py-2 md:py-0 md:text-3xl font-bold font-mono px-2 md:basis-[60%] md:pl-6 flex items-center min-h-0">
-            My name is John Doll and I graduated from Miami University with a B.S. in Computer Science in May 2023.
+            <p>My name is <span id="fade">John Doll</span> and I graduated from Miami University with a B.S. in Computer Science in May 2023.
             I started full-time with Lutron Electronics in Boynton Beach, Florida as a Systems Infrastructure Developer in June 2023. I started my pursuit of a Master's 
-            in Computer Science at the University of Illinois in Fall 2024.
+            in Computer Science at the University of Illinois in Fall 2024.</p>
           </div>
         </div>
         <h1 className="text-5xl py-10 md:py-0 md:text-7xl flex-shrink-0 w-full justify-center flex mb-2">
@@ -69,11 +70,11 @@ export default function Home() {
         </h1>
       </div>
       <div>
-        <h2 className="text-2xl md:text-5xl pb-2 pl-2">Experience</h2>
+        <h2 className="text-2xl md:text-5xl pb-2 pl-2"><Link href="/experience">Experience</Link></h2>
         <EmblaCarousel slides={EXPERIENCE_SLIDES} options={OPTIONS} />
-        <h2 className="text-2xl md:text-5xl pt-12 pb-2 pl-2">Projects</h2>
+        <h2 className="text-2xl md:text-5xl pt-12 pb-2 pl-2"><Link href="/projects">Projects</Link></h2>
         <EmblaCarousel slides={PROJECT_SLIDES} options={OPTIONS} />
-        <h2 className="text-2xl md:text-5xl pt-12 pb-2 pl-2">Education</h2>
+        <h2 className="text-2xl md:text-5xl pt-12 pb-2 pl-2"><Link href="/education">Education</Link></h2>
         <EmblaCarousel slides={EDUCATION_SLIDES} options={OPTIONS} />
         <br></br>
       </div>
