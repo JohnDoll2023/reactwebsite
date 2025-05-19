@@ -21,8 +21,16 @@ export const Footer = () => {
                 const commitsData = await commitsResponse.json();
                 if (commitsData.length > 0) {
                     const lastCommitDate = new Date(commitsData[0].commit.author.date);
-                    setLastEdited(lastCommitDate.toLocaleDateString());
-                    setLastCommitUrl(commitsData[0].html_url); // URL to the latest commit
+                    const currentDate = new Date();
+                    const diffInDays = (currentDate.getTime() - lastCommitDate.getTime()) / (1000 * 60 * 60 * 24);
+
+                    if (diffInDays <= 45) {
+                        setLastEdited(lastCommitDate.toLocaleDateString());
+                        setLastCommitUrl(commitsData[0].html_url); // URL to the latest commit
+                    } else {
+                        setLastEdited(null);
+                        setLastCommitUrl(null);
+                    }
                 }
 
                 // Fetch the latest release
