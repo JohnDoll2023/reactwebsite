@@ -184,3 +184,16 @@
     margin: 0;
     flex: 0 0 calc(33.333% - 2rem);
 }
+
+/* On mobile, make centered containers scrollable like normal */
+@media (max-width: 768px) {
+    .embla__container--centered {
+        justify-content: flex-start !important;
+        padding: 0;
+    }
+    
+    .embla__container--centered .embla__slide {
+        margin: 0 1.5rem;
+        flex: 0 0 var(--slide-size);
+    }
+}

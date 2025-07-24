@@ -21,8 +21,22 @@ type PropType = {
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   
-  // Disable auto-scroll if 3 or fewer slides (they all fit on desktop)
-  const shouldAutoScroll = slides.length > 3;
+  // Check if we're on mobile
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  
+  // Disable auto-scroll only if 3 or fewer slides AND on desktop
+  const shouldAutoScroll = slides.length > 3 || isMobile;
   
   const [emblaRef, emblaApi] = useEmblaCarousel(options, 
     shouldAutoScroll ? [AutoScroll({ playOnInit: true })] : []
