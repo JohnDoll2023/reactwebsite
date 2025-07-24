@@ -20,9 +20,13 @@ type PropType = {
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-    AutoScroll({ playOnInit: true }),
-  ]);
+  
+  // Disable auto-scroll if 3 or fewer slides (they all fit on desktop)
+  const shouldAutoScroll = slides.length > 3;
+  
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, 
+    shouldAutoScroll ? [AutoScroll({ playOnInit: true })] : []
+  );
   const [isPlaying, setIsPlaying] = useState(false);
 
   const {
@@ -56,7 +60,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   return (
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
+        <div className={`embla__container ${!shouldAutoScroll ? 'embla__container--centered' : ''}`}>
           {slides.map((slide, index) => (
             <div className="embla__slide" key={index}>
               <a href={slide.link} className="embla__slide__link">
