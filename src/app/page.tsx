@@ -20,7 +20,7 @@ const EXPERIENCE_SLIDES = [
   { label: "Amazon (2022)", link: "/experience/amazon2022" },
   { label: "Amazon (2021)", link: "/experience/amazon2021" },
   { label: "Hospitality Wifi", link: "/experience/hw" },
-  { label: "St. Mark's", link: "/experience/st-marks" },
+  { label: "St. Mark's", link: "/experience/stmarks" },
   { label: "Marathon", link: "/experience/marathon" },
 ];
 
