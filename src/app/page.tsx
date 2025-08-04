@@ -33,6 +33,10 @@ const OPTIONS: EmblaOptionsType = { loop: true }
 
 export default function Home() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [displayedText, setDisplayedText] = useState('');
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
+
+  const fullText = ">My name is John Doll and I graduated from Miami University with a B.S. in Computer Science in May 2023. I started full-time with Lutron Electronics in Boynton Beach, Florida as a Systems Infrastructure Developer in June 2023. I started my pursuit of a Master's in Computer Science at the University of Illinois in Fall 2024";
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -43,6 +47,21 @@ export default function Home() {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
+  }, []);
+
+  useEffect(() => {
+    let index = 0;
+    const typeInterval = setInterval(() => {
+      if (index < fullText.length) {
+        setDisplayedText(fullText.slice(0, index + 1));
+        index++;
+      } else {
+        setIsTypingComplete(true);
+        clearInterval(typeInterval);
+      }
+    }, 40); // Adjust speed here (lower = faster)
+
+    return () => clearInterval(typeInterval);
   }, []);
 
   return (
@@ -60,9 +79,12 @@ export default function Home() {
             />
           </div>
           <div className="flex-1 text-xl py-2 md:py-0 md:text-3xl font-bold font-mono px-2 md:basis-[60%] md:pl-6 flex items-center min-h-0">
-            <p>My name is <span id="fade">John Doll</span> and I graduated from Miami University with a B.S. in Computer Science in May 2023.
-            I started full-time with Lutron Electronics in Boynton Beach, Florida as a Systems Infrastructure Developer in June 2023. I started my pursuit of a Master's 
-            in Computer Science at the University of Illinois in Fall 2024.</p>
+            <p>
+              <span>{displayedText}</span>
+              <span className={`terminal-cursor ${isTypingComplete ? 'blink' : ''}`}>
+                █
+              </span>
+            </p>
           </div>
         </div>
         <h1 className="text-5xl py-10 md:py-0 md:text-7xl flex-shrink-0 w-full justify-center flex mb-2">

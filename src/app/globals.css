@@ -65,3 +65,28 @@ footer {
   animation: fadeInOut 5s infinite; /* 5 seconds for each cycle */
   transition: opacity 0.5s ease-in-out;
 }
+
+/* Terminal cursor styles */
+.terminal-cursor {
+  background-color: currentColor;
+  color: currentColor;
+  display: inline-block;
+  width: 0.6em;
+  height: 1em;
+  margin-left: 2px;
+}
+
+.terminal-cursor.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
