@@ -59,7 +59,7 @@ export const Navbar = () => {
                 <li key={item.href}>
                     <Link
                         href={item.href}
-                        className="dropdown-link"
+                        className="dropdown-link block w-full"
                         onClick={() => {
                             setOpenDropdown(null); // Close dropdown
                             setMobileOpen(false); // Close mobile menu
