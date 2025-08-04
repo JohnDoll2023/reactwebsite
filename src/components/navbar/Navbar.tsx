@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const dropdowns = {
     projects: [
@@ -36,6 +37,20 @@ type DropdownKey = keyof typeof dropdowns;
 export const Navbar = () => {
     const [openDropdown, setOpenDropdown] = useState<DropdownKey | null>(null);
     const [mobileOpen, setMobileOpen] = useState(false);
+    const pathname = usePathname();
+
+    // Helper function to check if a path is active
+    const isActive = (path: string, section?: DropdownKey) => {
+        if (path === "/" && pathname === "/") return true;
+        if (path === "/" && pathname !== "/") return false;
+        
+        // For dropdown sections, check if current path starts with the section name
+        if (section) {
+            return pathname.startsWith(`/${section}`);
+        }
+        
+        return pathname === path;
+    };
 
     // Helper to render dropdown
     const renderDropdown = (key: DropdownKey) => (
@@ -76,8 +91,8 @@ export const Navbar = () => {
                     <li>
                         <Link
                             href="/"
-                            className="mx-5"
-                            onClick={() => setMobileOpen(false)} // Close mobile menu
+                            className={`mx-5 ${isActive("/") ? "text-yellow-300 font-bold" : "hover:text-yellow-200"}`}
+                            onClick={() => setMobileOpen(false)}
                         >
                             Home
                         </Link>
@@ -86,11 +101,11 @@ export const Navbar = () => {
                         <li
                             key={key}
                             className={openDropdown === key ? "open" : ""}
-                            onMouseEnter={() => setOpenDropdown(key as DropdownKey)} // Open dropdown on hover
-                            onMouseLeave={() => setOpenDropdown(null)} // Close dropdown on mouse leave
+                            onMouseEnter={() => setOpenDropdown(key as DropdownKey)}
+                            onMouseLeave={() => setOpenDropdown(null)}
                         >
                             <button
-                                className="mx-5 capitalize"
+                                className={`mx-5 capitalize ${isActive("", key as DropdownKey) ? "text-yellow-300 font-bold" : "hover:text-yellow-200"}`}
                                 style={{
                                     display: "flex",
                                     alignItems: "center",
@@ -98,10 +113,9 @@ export const Navbar = () => {
                                     border: "none",
                                     cursor: "pointer",
                                     width: "100%",
-                                    // padding: 0,
                                 }}
                                 onClick={() => {
-                                    setOpenDropdown(openDropdown === key ? null : (key as DropdownKey)); // Toggle dropdown
+                                    setOpenDropdown(openDropdown === key ? null : (key as DropdownKey));
                                 }}
                                 type="button"
                             >
@@ -114,8 +128,8 @@ export const Navbar = () => {
                     <li>
                         <Link
                             href="/resume"
-                            className="mx-5"
-                            onClick={() => setMobileOpen(false)} // Close mobile menu
+                            className={`mx-5 ${isActive("/resume") ? "text-yellow-300 font-bold" : "hover:text-yellow-200"}`}
+                            onClick={() => setMobileOpen(false)}
                         >
                             Resume
                         </Link>
@@ -123,8 +137,8 @@ export const Navbar = () => {
                     <li>
                         <Link
                             href="/1se"
-                            className="mx-5"
-                            onClick={() => setMobileOpen(false)} // Close mobile menu
+                            className={`mx-5 ${isActive("/1se") ? "text-yellow-300 font-bold" : "hover:text-yellow-200"}`}
+                            onClick={() => setMobileOpen(false)}
                         >
                             1SE
                         </Link>
@@ -132,8 +146,8 @@ export const Navbar = () => {
                     <li>
                         <Link
                             href="/contact"
-                            className="mx-5"
-                            onClick={() => setMobileOpen(false)} // Close mobile menu
+                            className={`mx-5 ${isActive("/contact") ? "text-yellow-300 font-bold" : "hover:text-yellow-200"}`}
+                            onClick={() => setMobileOpen(false)}
                         >
                             Contact
                         </Link>
