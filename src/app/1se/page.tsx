@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const generateMetadata = () => {
     return {
@@ -14,13 +15,15 @@ export default function Home() {
       </div>
       <div className="flex flex-1 flex-row">
         <div className="relative w-full max-w-2xl aspect-video">
-          <Image
-            src="/1se_logo.png"
-            alt="1 second everyday logo"
-            fill
-            className="object-contain"
-            priority
-          />
+          <Link href="https://1se.co" target="_blank">
+            <Image
+              src="/1se_logo.png"
+              alt="1 second everyday logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </Link>
         </div>
         <div>
           <p>
