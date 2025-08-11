@@ -87,16 +87,16 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <h1 className="text-5xl py-10 md:py-0 md:text-7xl flex-shrink-0 w-full justify-center flex mb-2">
+        <h1 className="py-10 md:py-0 flex-shrink-0 w-full justify-center flex mb-2">
           More about me
         </h1>
       </div>
       <div>
-        <h2 className="text-2xl md:text-5xl pb-2 pl-2"><Link href="/experience">Experience</Link></h2>
+        <h2 className="pb-2 pl-2"><Link href="/experience">Experience</Link></h2>
         <EmblaCarousel slides={EXPERIENCE_SLIDES} options={OPTIONS} />
-        <h2 className="text-2xl md:text-5xl pt-12 pb-2 pl-2"><Link href="/projects">Projects</Link></h2>
+        <h2 className="pt-12 pb-2 pl-2"><Link href="/projects">Projects</Link></h2>
         <EmblaCarousel slides={PROJECT_SLIDES} options={OPTIONS} />
-        <h2 className="text-2xl md:text-5xl pt-12 pb-2 pl-2"><Link href="/education">Education</Link></h2>
+        <h2 className="pt-12 pb-2 pl-2"><Link href="/education">Education</Link></h2>
         <EmblaCarousel slides={EDUCATION_SLIDES} options={OPTIONS} />
         <br></br>
       </div>
