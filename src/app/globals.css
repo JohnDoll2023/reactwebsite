@@ -90,3 +90,34 @@ footer {
     opacity: 0;
   }
 }
+
+h1 {
+  @apply md:text-7xl text-5xl font-extrabold italic;
+}
+
+h2 {
+  @apply md:text-5xl text-2xl font-extrabold italic;
+}
+
+h3 {
+  @apply font-bold italic text-2xl;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+h4 {
+  @apply font-bold italic md:text-4xl text-xl;
+}
+
+h5 {
+  @apply font-bold italic text-3xl;
+}
+
+h5 {
+  @apply font-bold italic text-2xl;
+}
