@@ -94,7 +94,7 @@ export const Footer = () => {
                         </a>
                     </li>
                     <li className="mx-2" >
-                        <a href="https://soundcloud.com/john-doll-799764752" target="_blank">
+                        <a href="https://soundcloud.com/johntherobot" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M1.75 11.875v3.5m3-5.125v6m3-7.125v7.25"/>
                                 <path fill="currentColor" d="M10.75 16.375h-.75a.75.75 0 0 0 .75.75v-.75Zm7.745-4.663-.749-.032a.75.75 0 0 0 1.126.681l-.377-.649ZM10.75 7.563l-.443-.605A.75.75 0 0 0 10 7.563h.75Zm2.875 8.062H10.75v1.5h2.875v-1.5Zm6.125 0h-6.125v1.5h6.125v-1.5Zm1.75-1.75c0 .967-.784 1.75-1.75 1.75v1.5c1.795 0 3.25-1.455 3.25-3.25h-1.5Zm-1.75-1.75c.966 0 1.75.783 1.75 1.75h1.5c0-1.795-1.455-3.25-3.25-3.25v1.5Zm-.878.236A1.739 1.739 0 0 1 19.75 12.125V10.625c-.593 0-1.151.16-1.631.438l.754 1.297ZM17.75 11.5c0 .06-.001.12-.004.18l1.499.064c.003-.081.005-.162.005-.244h-1.5Zm-4.125-4.125c2.278 0 4.125 1.847 4.125 4.125h1.5c0-3.107-2.518-5.625-5.625-5.625v1.5Zm-2.432.805A4.103 4.103 0 0 1 13.625 7.375V5.875c-1.24 0-2.388.402-3.318 1.082l.886 1.211ZM10 7.563V16.375h1.5V7.563H10Z"/>
