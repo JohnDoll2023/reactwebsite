@@ -1,15 +1,12 @@
-import Image from "next/image";
+import { ContactForm } from "./ContactForm";
 
 export const generateMetadata = () => {
     return {
-      title: 'John Doll | Contact Me',
+      title: 'John Doll | Contact',
+      description: 'Send John a message about work, questions, or just to say hello.',
     };
   };
 
-export default function Home() {
-  return (
-    <div className="flex flex-1">
-        Contact Me
-    </div>
-  );
+export default function ContactPage() {
+  return <ContactForm />;
 }
