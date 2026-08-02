@@ -7,6 +7,48 @@ export const generateMetadata = () => {
     };
   };
 
+const completedCourses = [
+  {
+    href: "https://siebelschool.illinois.edu/academics/courses/CS427",
+    label: "CS 427 - Software Engineering",
+  },
+  {
+    href: "https://siebelschool.illinois.edu/academics/courses/CS412",
+    label: "CS 412 - Data Mining",
+  },
+  {
+    href: "https://ws.engr.illinois.edu/sitemanager/getfile.asp?id=507",
+    label: "CS 416 - Data Visualization",
+  },
+  {
+    href: "https://siebelschool.illinois.edu/academics/courses/CS513",
+    label: "CS 513 - Data Cleaning",
+  },
+  {
+    href: "https://siebelschool.illinois.edu/academics/courses/cs598ao2",
+    label: "CS 598 - Data Curation",
+  },
+  {
+    href: "https://ws.engr.illinois.edu/sitemanager/getfile.asp?id=2191",
+    label: "CS 598 - Deep Learning for Healthcare",
+  },
+  {
+    href: "https://siebelschool.illinois.edu/academics/courses/cs411",
+    label: "CS 411 - Database Systems",
+  },
+];
+
+const transferredCourses = [
+  {
+    href: "https://miamioh.edu/cec/departments/computer-science-software-engineering/academics/course-descriptions/cse-courses/cse-467.html",
+    label: "CSE 567 - Computer and Network Security",
+  },
+  {
+    href: "https://miamioh.edu/cec/departments/computer-science-software-engineering/academics/course-descriptions/cse-courses/cse-486.html",
+    label: "CSE 586 - Artificial Intelligence",
+  },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col items-center p-8">
@@ -15,7 +57,7 @@ export default function Home() {
       </div>
       <div className="flex flex-1 flex-col md:flex-row items-center order-3 md:order-2">
         <p className="flex-1 text-xl text-left order-2 md:order-1">
-          When I began my search for a graduate school to attend to pursue my Master's in Computer Science, one of criteria I used
+          When I began my search for a graduate school to attend to pursue my Master&apos;s in Computer Science, one of criteria I used
           was to find a program that was highly touted and well-regarded. Enter, the University of Illinois, a prestigious institution 
           known for its strong engineering and computer science programs. 
         </p>
@@ -39,32 +81,77 @@ export default function Home() {
         <div className="flex items-start mb-4">
           <h3>Courses</h3>
         </div>
-        <div className="flex flex-col md:flex-row justify-between w-full text-2xl gap-4">
-          <div className="order-1 md:order-none">
+        <div className="w-full text-2xl">
+          <div className="md:hidden">
             <div className="flex flex-row justify-between">
               <h4>Completed</h4>
             </div>
             <div className="flex-1 text-xl text-left">
-              <p><Link href="https://siebelschool.illinois.edu/academics/courses/CS427" target="_blank" className="hover:underline">CS 427 - Software Engineering</Link></p>
-              <p><Link href="https://siebelschool.illinois.edu/academics/courses/CS412" target="_blank" className="hover:underline">CS 412 - Data Mining</Link></p>
-              <p><Link href="https://ws.engr.illinois.edu/sitemanager/getfile.asp?id=507" target="_blank" className="hover:underline">CS 416 - Data Visualization</Link></p>
-              <p><Link href="https://siebelschool.illinois.edu/academics/courses/CS513" target="_blank" className="hover:underline">CS 513 - Data Cleaning</Link></p>
+              {completedCourses.map((course) => (
+                <p key={course.label}>
+                  <Link href={course.href} target="_blank" className="hover:underline">
+                    {course.label}
+                  </Link>
+                </p>
+              ))}
             </div>
-          </div>
-          <div className="order-2 md:order-none">
-            <div className="flex-1 text-xl">
-              <p><Link href="https://siebelschool.illinois.edu/academics/courses/cs598ao2" target="_blank" className="hover:underline">CS 598 - Data Curation</Link></p>
-              <p><Link href="https://ws.engr.illinois.edu/sitemanager/getfile.asp?id=2191" target="_blank" className="hover:underline">CS 598 - Deep Learning for Healthcare</Link></p>
-              <p><Link href="https://siebelschool.illinois.edu/academics/courses/cs411" target="_blank" className="hover:underline">CS 411 - Database Systems</Link></p>
-            </div>
-          </div>
-          <div className="order-3 md:order-none">
-            <div className="flex flex-row justify-between">
+
+            <div className="mt-6 flex flex-row justify-between">
               <h4>Transferred from Miami</h4>
             </div>
             <div className="flex-1 text-xl">
-              <p><Link href="https://miamioh.edu/cec/departments/computer-science-software-engineering/academics/course-descriptions/cse-courses/cse-467.html" target="_blank" className="hover:underline">CSE 567 - Computer and Network Security</Link></p>
-              <p><Link href="https://miamioh.edu/cec/departments/computer-science-software-engineering/academics/course-descriptions/cse-courses/cse-486.html" target="_blank" className="hover:underline">CSE 586 - Artificial Intelligence</Link></p>
+              {transferredCourses.map((course) => (
+                <p key={course.label}>
+                  <Link href={course.href} target="_blank" className="hover:underline">
+                    {course.label}
+                  </Link>
+                </p>
+              ))}
+            </div>
+          </div>
+
+          <div className="hidden md:grid md:grid-cols-3 md:gap-4">
+            <div>
+              <div className="flex flex-row justify-between">
+                <h4>Completed</h4>
+              </div>
+              <div className="flex-1 text-xl text-left">
+                {completedCourses.slice(0, 4).map((course) => (
+                  <p key={course.label}>
+                    <Link href={course.href} target="_blank" className="hover:underline">
+                      {course.label}
+                    </Link>
+                  </p>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="invisible">Completed</h4>
+              <div className="flex-1 text-xl text-left">
+                {completedCourses.slice(4).map((course) => (
+                  <p key={course.label}>
+                    <Link href={course.href} target="_blank" className="hover:underline">
+                      {course.label}
+                    </Link>
+                  </p>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="flex flex-row justify-between">
+                <h4>Transferred from Miami</h4>
+              </div>
+              <div className="flex-1 text-xl">
+                {transferredCourses.map((course) => (
+                  <p key={course.label}>
+                    <Link href={course.href} target="_blank" className="hover:underline">
+                      {course.label}
+                    </Link>
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
         </div>
