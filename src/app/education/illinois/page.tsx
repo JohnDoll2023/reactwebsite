@@ -31,7 +31,7 @@ export default function Home() {
           </Link>
         </div>
         <p className="flex-1 text-xl text-left order-3 md:order-3 md:mt-0 mt-7">
-          Funny enough, the first time I visited campus (Urbana-Champaign) was while I was already in the midst of my first semester as a recruiter for Lutron.
+          Funny enough, the first time I visited campus (Urbana-Champaign) was as a recruiter for Lutron while I was already in the midst of my first semester.
           I went to the career fair and was recruiting my classmates shortly after becoming a member of the student body myself, albeit remotely.
         </p>
       </div>
@@ -52,12 +52,10 @@ export default function Home() {
             </div>
           </div>
           <div className="order-2 md:order-none">
-            <div className="flex flex-row justify-between">
-              <h4>Upcoming</h4>
-            </div>
             <div className="flex-1 text-xl">
               <p><Link href="https://siebelschool.illinois.edu/academics/courses/cs598ao2" target="_blank" className="hover:underline">CS 598 - Data Curation</Link></p>
               <p><Link href="https://ws.engr.illinois.edu/sitemanager/getfile.asp?id=2191" target="_blank" className="hover:underline">CS 598 - Deep Learning for Healthcare</Link></p>
+              <p><Link href="https://siebelschool.illinois.edu/academics/courses/cs411" target="_blank" className="hover:underline">CS 411 - Database Systems</Link></p>
             </div>
           </div>
           <div className="order-3 md:order-none">
@@ -66,7 +64,6 @@ export default function Home() {
             </div>
             <div className="flex-1 text-xl">
               <p><Link href="https://miamioh.edu/cec/departments/computer-science-software-engineering/academics/course-descriptions/cse-courses/cse-467.html" target="_blank" className="hover:underline">CSE 567 - Computer and Network Security</Link></p>
-              <p><Link href="https://bulletin.miamioh.edu/courses-instruction/qtm/#:~:text=QTM%C2%A0161.%20Quantum,CSE%C2%A0374." target="_blank" className="hover:underline">CSE 570N - Quantum Computing</Link></p>
               <p><Link href="https://miamioh.edu/cec/departments/computer-science-software-engineering/academics/course-descriptions/cse-courses/cse-486.html" target="_blank" className="hover:underline">CSE 586 - Artificial Intelligence</Link></p>
             </div>
           </div>
