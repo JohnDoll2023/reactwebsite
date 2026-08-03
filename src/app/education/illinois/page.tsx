@@ -53,7 +53,7 @@ export default function Home() {
   return (
     <div className="flex flex-1 flex-col items-center p-8">
       <div className="order-2 md:order-1">
-        <h2>University of Illinois (Fall 2024 - Present)</h2>
+        <h2>University of Illinois (Fall '24 - August '26)</h2>
       </div>
       <div className="flex flex-1 flex-col md:flex-row items-center order-3 md:order-2">
         <p className="flex-1 text-xl text-left order-2 md:order-1">
@@ -113,7 +113,7 @@ export default function Home() {
           <div className="hidden md:grid md:grid-cols-3 md:gap-4">
             <div>
               <div className="flex flex-row justify-between">
-                <h4>Completed</h4>
+                <h5>Completed</h5>
               </div>
               <div className="flex-1 text-xl text-left">
                 {completedCourses.slice(0, 4).map((course) => (
@@ -141,7 +141,7 @@ export default function Home() {
 
             <div>
               <div className="flex flex-row justify-between">
-                <h4>Transferred from Miami</h4>
+                <h5>Transferred from Miami</h5>
               </div>
               <div className="flex-1 text-xl">
                 {transferredCourses.map((course) => (

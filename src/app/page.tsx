@@ -36,7 +36,11 @@ export default function Home() {
   const [displayedText, setDisplayedText] = useState('');
   const [isTypingComplete, setIsTypingComplete] = useState(false);
 
-  const fullText = ">My name is John Doll and I graduated from Miami University with a B.S. in Computer Science in May 2023. I started full-time with Lutron Electronics in Boynton Beach, Florida as a Systems Infrastructure Developer in June 2023. I started my pursuit of a Master's in Computer Science at the University of Illinois in Fall 2024";
+  const fullText = `>My name is John Doll and I graduated from Miami University 
+  with a B.S. in Computer Science in May 2023. I started full-time with Lutron Electronics in 
+  Boynton Beach, Florida as a Systems Infrastructure Developer in June 2023. I completed my
+  Master's in Computer Science at the University of Illinois in August 2026. Now, I am a 
+  DevOps Engineer on the Central DevOps team.`;
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
