@@ -11,6 +11,6 @@ been through, but it's time for another revamp and learning opportunity.
 
 So, January 10, 2025 offically marks the birth of the third version of my website. This time, I'm building it with Next.js, React, and Tailwind CSS.
 
-I'm also using this as an opportunity to learn more about GitHub Actions and the robustness of GitHub in general. In my current role at Lutron Electronics, I am a devops engineer, but we don't use Github, so I'm excited to learn more about it.
+I'm also using this as an opportunity to learn more about GitHub Actions and the robustness of GitHub in general. In my current role at Lutron Electronics, I am a DevOps engineer, but we don't use Github, so I'm excited to learn more about it.
 
-test
+Unfortunately, I started this effort at the beginning of my endeavor to obtain a Master's degree. This has led to me not being able to put in regular time working on this website. Regardless, I am excited to work on the website and make improvements whenever I get the chance.
