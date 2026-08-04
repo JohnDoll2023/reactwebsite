@@ -60,7 +60,7 @@ export default function Home() {
       <div className="mb-12 md:hidden">
         <div className="text-center font-bold mb-4">
           <h1 className="text-3xl">University of Illinois</h1>
-          <h2 className="text-lg">Fall 2024 - Present</h2>
+          <h2 className="text-lg">Fall 2024 - August 2026</h2>
         </div>
         <div className="flex justify-center mb-4">
           <Link href="/education/illinois" className="block relative w-full max-w-[28rem] aspect-[4/3] cursor-pointer hover:opacity-80 transition-opacity">
