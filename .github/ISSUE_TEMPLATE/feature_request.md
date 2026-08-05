@@ -1,9 +1,10 @@
 ---
 name: Feature request
 about: Suggest an idea or enhancement for this project
-title: '[FEATURE] '
+title: "[FEATURE] "
 labels: enhancement
-assignees: ''
+assignees: JohnDoll2023
+
 ---
 
 What is the feature you would like to see?
