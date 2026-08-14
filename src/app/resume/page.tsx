@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="flex flex-1 justify-center">
         <iframe
-          src="/Resume.pdf"
+          src="/JohnDollResume.pdf"
           className="rounded-2xl w-full max-w-4xl h-[80vh]"
           title="Resume"
         />
