@@ -1,10 +1,8 @@
 ## Welcome to my personal website 3.0 ##
 
-[![CI](https://github.com/JohnDoll2023/reactwebsite/actions/workflows/testActions.yml/badge.svg)](https://github.com/JohnDoll2023/reactwebsite/actions/workflows/testActions.yml)
+[![CI](https://github.com/JohnDoll2023/reactwebsite/actions/workflows/testActions.yml/badge.svg)](https://github.com/JohnDoll2023/reactwebsite/actions/workflows/testActions.yml) [![CodeQL](https://github.com/JohnDoll2023/reactwebsite/actions/workflows/codeql.yml/badge.svg)](https://github.com/JohnDoll2023/reactwebsite/actions/workflows/codeql.yml) [![Release](https://img.shields.io/github/v/release/JohnDoll2023/reactwebsite.svg)](https://github.com/JohnDoll2023/reactwebsite/releases)
 
-[![CodeQL](https://github.com/JohnDoll2023/reactwebsite/actions/workflows/codeql.yml/badge.svg)](https://github.com/JohnDoll2023/reactwebsite/actions/workflows/codeql.yml)
-
-[![Release](https://img.shields.io/github/v/release/JohnDoll2023/reactwebsite.svg)](https://github.com/JohnDoll2023/reactwebsite/releases)
+[![Readme Card](https://github-stats-extended.vercel.app/api/pin/?username=JohnDoll2023&repo=reactwebsite&show=prs_authored,prs_commented,issues_authored)](https://github.com/JohnDoll2023/reactwebsite)
 
 I built the first version of my website in late 2020 during fall of my sophomore year of college, built solely on HTML, CSS,
 JavaScript, and Bootstrap. 
