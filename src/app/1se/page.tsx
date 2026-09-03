@@ -33,7 +33,7 @@ export default function Home() {
 
         <section className="grid grid-cols-1 items-center gap-8 rounded-xl border border-gray-300/70 bg-gray-100/40 p-5 shadow-sm dark:border-gray-700 dark:bg-gray-900/40 md:p-8 lg:grid-cols-2">
           <div className="relative mx-auto aspect-video w-full max-w-2xl">
-            <Link href="https://1se.co" target="_blank" rel="noopener noreferrer">
+            <Link href="https://1se.co" target="_blank" rel="noopener noreferrer" title="Visit 1 Second Everyday website" className="transition-opacity hover:opacity-80">
               <Image
                 src="/1se_logo.png"
                 alt="1 second everyday logo"

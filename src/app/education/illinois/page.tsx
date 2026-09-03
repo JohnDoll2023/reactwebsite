@@ -62,7 +62,7 @@ export default function Home() {
           known for its strong engineering and computer science programs. 
         </p>
         <div className="relative w-full max-w-2xl aspect-video order-1 md:order-2 md:my-0 my-4">
-          <Link href="https://illinois.edu" target="_blank">
+          <Link href="https://illinois.edu" target="_blank" title="Visit University of Illinois website" className="transition-opacity hover:opacity-80">
             <Image
               src="/illinois.png"
               alt="University of Illinois block I logo"
@@ -89,7 +89,7 @@ export default function Home() {
             <div className="flex-1 text-xl text-left">
               {completedCourses.map((course) => (
                 <p key={course.label}>
-                  <Link href={course.href} target="_blank" className="hover:underline">
+                  <Link href={course.href} target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">
                     {course.label}
                   </Link>
                 </p>
@@ -102,7 +102,7 @@ export default function Home() {
             <div className="flex-1 text-xl">
               {transferredCourses.map((course) => (
                 <p key={course.label}>
-                  <Link href={course.href} target="_blank" className="hover:underline">
+                  <Link href={course.href} target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">
                     {course.label}
                   </Link>
                 </p>
@@ -118,7 +118,7 @@ export default function Home() {
               <div className="flex-1 text-xl text-left">
                 {completedCourses.slice(0, 4).map((course) => (
                   <p key={course.label}>
-                    <Link href={course.href} target="_blank" className="hover:underline">
+                    <Link href={course.href} target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">
                       {course.label}
                     </Link>
                   </p>
@@ -131,7 +131,7 @@ export default function Home() {
               <div className="flex-1 text-xl text-left">
                 {completedCourses.slice(4).map((course) => (
                   <p key={course.label}>
-                    <Link href={course.href} target="_blank" className="hover:underline">
+                    <Link href={course.href} target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">
                       {course.label}
                     </Link>
                   </p>
@@ -146,7 +146,7 @@ export default function Home() {
               <div className="flex-1 text-xl">
                 {transferredCourses.map((course) => (
                   <p key={course.label}>
-                    <Link href={course.href} target="_blank" className="hover:underline">
+                    <Link href={course.href} target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">
                       {course.label}
                     </Link>
                   </p>
