@@ -19,7 +19,8 @@ export default function Home() {
            href="https://www.hospitalitywifi.com/"
            target="_blank"
            rel="noreferrer"
-           className="inline-flex justify-center"
+           title="Visit Hospitality Wifi website"
+           className="inline-flex justify-center transition-opacity hover:opacity-80"
          >
            <Image
              src="/hw.png"

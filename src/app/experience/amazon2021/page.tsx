@@ -34,14 +34,25 @@ export default function Amazon2021Page() {
       <header className="space-y-3 text-center">
         <h1 className="text-3xl font-bold md:text-4xl">Amazon (2021)</h1>
         <p className="text-lg">Software Development Engineer Intern</p>
-        <Image
-          src="/amazon.png"
-          alt="Amazon logo"
-          width={2000}
-          height={600}
-          className="mx-auto h-auto w-full max-w-64 object-contain brightness-0 invert"
-          priority
-        />
+        <a
+           href="https://www.amazon.com/"
+           target="_blank"
+           rel="noreferrer"
+           title="Visit Amazon website"
+           className="inline-flex justify-center transition-opacity hover:opacity-80"
+         >
+          <Image
+            src="/amazon.png"
+            alt="Amazon logo"
+            width={2000}
+            height={600}
+            className="mx-auto h-auto w-full max-w-64 object-contain brightness-0 invert"
+            priority
+          />
+        </a>
+        <p className="mx-auto max-w-3xl text-left text-lg leading-8">
+            Working at Amazon as a Software Developer Engineer Intern was one of the most incredible experiences of my life. I had the opportunity to meet so many people of all walks of life, live in a brand new city all on my own, and complete a meaningful project at one of the most well-known companies in the world.
+          </p>
       </header>
       <section className="grid grid-cols-1 gap-10 xl:grid-cols-2">
         <article className="flex flex-col">
@@ -66,22 +77,6 @@ export default function Amazon2021Page() {
           />
           <Story paragraphs={personalStory} />
         </article>
-      </section>
-      <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        <Image
-          src="/amazon-shoreline.jpeg"
-          alt="Seattle experience"
-          width={2000}
-          height={1500}
-          className="aspect-[4/3] h-full w-full rounded-2xl object-cover"
-        />
-        <Image
-          src="/amazon-volleyball.jpeg"
-          alt="Amazon summer activity"
-          width={2000}
-          height={1500}
-          className="aspect-[4/3] h-full w-full rounded-2xl object-cover"
-        />
       </section>
       </article>
     </div>
