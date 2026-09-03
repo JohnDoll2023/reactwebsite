@@ -12,6 +12,9 @@ export default function Home() {
      <article className="w-full max-w-6xl space-y-8">
        <header className="space-y-4 text-center">
          <h1 className="text-3xl font-bold md:text-4xl">Hospitality Wifi</h1>
+         <p className="text-lg">
+           Global Support Liaison
+         </p>
          <a
            href="https://www.hospitalitywifi.com/"
            target="_blank"
