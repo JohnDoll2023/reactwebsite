@@ -13,7 +13,7 @@ export default function Home() {
        <header className="space-y-3 text-center">
          <h1 className="text-3xl font-bold md:text-4xl">St. Mark&apos;s</h1>
          <p className="text-lg">
-           St. Mark&apos;s Lutheran Church in Wapakoneta, Ohio
+           Sound and Technology Support
          </p>
          <div className="inline-flex justify-center">
            <Image
