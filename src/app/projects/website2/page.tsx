@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export const generateMetadata = () => {
     return {
       title: 'John Doll | Website 2.0',
