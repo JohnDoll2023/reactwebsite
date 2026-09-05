@@ -20,7 +20,7 @@ export default function Home() {
            className="inline-flex justify-center"
          >
            <Image
-             src="/marathon.png"
+             src="/experience/marathon/marathon.png"
              alt="Marathon Petroleum logo"
              width={900}
              height={240}
@@ -63,7 +63,7 @@ export default function Home() {
            className="flex items-center justify-center rounded-lg p-4 shadow"
          >
            <Image
-             src="/mpc.png"
+             src="/experience/marathon/mpc.png"
              alt="Marathon Petroleum Corporation emblem"
              width={480}
              height={480}
@@ -71,7 +71,7 @@ export default function Home() {
            />
          </a>
          <Image
-           src="/arduino.jpeg"
+           src="/experience/marathon/arduino.jpeg"
            alt="Arduino board used during the explorers program"
            width={960}
            height={640}

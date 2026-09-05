@@ -42,7 +42,7 @@ export default function Amazon2021Page() {
            className="inline-flex justify-center transition-opacity hover:opacity-80"
          >
           <Image
-            src="/amazon.png"
+            src="/experience/amazon/amazon.png"
             alt="Amazon logo"
             width={2000}
             height={600}
@@ -58,7 +58,7 @@ export default function Amazon2021Page() {
         <article className="flex flex-col">
           <h2 className="mb-6 text-center">Professional</h2>
           <Image
-            src="/amazon-team.jpeg"
+            src="/experience/amazon/amazon-team.jpeg"
             alt="Amazon team"
             width={2000}
             height={1500}
@@ -69,7 +69,7 @@ export default function Amazon2021Page() {
         <article className="flex flex-col">
           <h2 className="mb-6 text-center">Personal</h2>
           <Image
-            src="/amazon-rainier.jpeg"
+            src="/experience/amazon/amazon-rainier.jpeg"
             alt="Mount Rainier near Seattle"
             width={2000}
             height={1500}

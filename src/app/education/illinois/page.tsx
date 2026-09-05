@@ -64,7 +64,7 @@ export default function Home() {
         <div className="relative w-full max-w-2xl aspect-video order-1 md:order-2 md:my-0 my-4">
           <Link href="https://illinois.edu" target="_blank" title="Visit University of Illinois website" className="transition-opacity hover:opacity-80">
             <Image
-              src="/illinois.png"
+              src="/education/illinois.png"
               alt="University of Illinois block I logo"
               fill
               className="object-contain"

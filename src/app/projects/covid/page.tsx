@@ -46,28 +46,26 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          <Image
-            src="/projects/covid/covidmap.gif"
-            alt="Dashboard gif"
-            width={1200}
-            height={800}
-            className="h-auto w-full rounded-2xl border border-slate-200 bg-white shadow-sm"
-          />
-          <Image
-            src="/projects/covid/covidgraph.gif"
-            alt="Dashboard gif"
-            width={1200}
-            height={800}
-            className="h-auto w-full rounded-2xl border border-slate-200 bg-white shadow-sm"
-          />
-          <Image
-            src="/projects/covid/covidchart.gif"
-            alt="Dashboard gif"
-            width={1200}
-            height={800}
-            className="h-auto w-full rounded-2xl border border-slate-200 bg-white shadow-sm"
-          />
+        <div className="grid gap-5 md:grid-cols-2">
+          {[
+            ["/projects/covid/covidmap.gif", "COVID-19 dashboard map"],
+            ["/projects/covid/covidgraph.gif", "COVID-19 dashboard graph"],
+            ["/projects/covid/covidchart.gif", "COVID-19 dashboard chart"],
+            ["/projects/covid/covid.png", "COVID-19 dashboard"],
+          ].map(([src, alt]) => (
+            <div
+              key={src}
+              className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+            >
+              <Image
+                src={src}
+                alt={alt}
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-contain p-3"
+              />
+            </div>
+          ))}
         </div>
 
         <div className="rounded-[1.5rem] border border-slate-200/70 bg-white/90 p-6 shadow-sm md:p-8">

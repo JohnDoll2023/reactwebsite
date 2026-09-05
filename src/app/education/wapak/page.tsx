@@ -14,7 +14,7 @@ export default function Home() {
         <div className="relative min-h-64 w-full">
           <Link href="https://wapak.org" target="_blank" title="Visit Wapakoneta High School website" className="transition-opacity hover:opacity-80">
             <Image
-              src="/wapakW.png"
+              src="/education/wapakW.png"
               alt="Wapakoneta High School logo"
               fill
               className="object-contain"

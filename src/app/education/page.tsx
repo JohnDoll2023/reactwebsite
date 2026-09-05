@@ -21,7 +21,7 @@ export default function Home() {
         <div className="flex justify-center mb-4">
           <Link href="/education/wapak" className="block relative w-full max-w-[32rem] aspect-[4/3] cursor-pointer hover:opacity-80 transition-opacity">
             <Image
-              src="/wapakW.png"
+              src="/education/wapakW.png"
               alt="Wapakoneta High School logo"
               fill
               className="object-contain"
@@ -43,7 +43,7 @@ export default function Home() {
         <div className="flex justify-center mb-4">
           <Link href="/education/miami" className="block relative w-full max-w-[28rem] aspect-[4/3] cursor-pointer hover:opacity-80 transition-opacity">
             <Image
-              src="/miami.png"
+              src="/education/miami.png"
               alt="Miami University logo"
               fill
               className="object-contain"
@@ -65,7 +65,7 @@ export default function Home() {
         <div className="flex justify-center mb-4">
           <Link href="/education/illinois" className="block relative w-full max-w-[28rem] aspect-[4/3] cursor-pointer hover:opacity-80 transition-opacity">
             <Image
-              src="/illinois.png"
+              src="/education/illinois.png"
               alt="University of Illinois block I logo"
               fill
               className="object-contain"
@@ -101,7 +101,7 @@ export default function Home() {
           <div className="flex-1 flex justify-center">
             <Link href="/education/wapak" className="block relative w-full max-w-[32rem] aspect-[4/3] cursor-pointer hover:opacity-80 transition-opacity">
               <Image
-                src="/wapakW.png"
+                src="/education/wapakW.png"
                 alt="Wapakoneta High School logo"
                 fill
                 className="object-contain"
@@ -112,7 +112,7 @@ export default function Home() {
           <div className="flex-1 flex justify-center">
             <Link href="/education/miami" className="block relative w-full max-w-[28rem] aspect-[4/3] cursor-pointer hover:opacity-80 transition-opacity">
               <Image
-                src="/miami.png"
+                src="/education/miami.png"
                 alt="Miami University logo"
                 fill
                 className="object-contain"
@@ -123,7 +123,7 @@ export default function Home() {
           <div className="flex-1 flex justify-center">
             <Link href="/education/illinois" className="block relative w-full max-w-[28rem] aspect-[4/3] cursor-pointer hover:opacity-80 transition-opacity">
               <Image
-                src="/illinois.png"
+                src="/education/illinois.png"
                 alt="University of Illinois block I logo"
                 fill
                 className="object-contain"
