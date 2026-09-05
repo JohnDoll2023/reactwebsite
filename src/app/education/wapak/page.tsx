@@ -25,7 +25,7 @@ export default function Home() {
         <p className="self-center text-left text-xl">
           High school was a memorable experience, and I actually miss it jusssstttt a little.
           It felt like each of my teachers was one-in-a-million, and it made the days all the more enjoyable.
-          From our AP Statistics music video, to our Zoology invertebrate project, or any of our countless editions of Daily Tennis, my friends and I stayed busy having fun.
+          From our <Link href="https://www.youtube.com/watch?v=1Y_6K8NwmRw" target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">AP Statistics music video</Link>, to our <Link href="https://www.youtube.com/watch?v=pmzMBAo3Ics" target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">Zoology invertebrate project video</Link>, or any of our countless editions of <Link href="https://www.youtube.com/watch?v=2WbyOv6qIR8" target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">Daily Tennis</Link>, my friends and I stayed busy having fun.
         </p>
         <p className="text-left text-xl">
           I was highly involved in my teenage years, running cross country in the fall, being a part of academic team in the winter/spring, and playing tennis in the spring.
