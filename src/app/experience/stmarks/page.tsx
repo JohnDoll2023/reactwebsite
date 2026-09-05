@@ -17,7 +17,7 @@ export default function Home() {
          </p>
          <div className="inline-flex justify-center">
            <Image
-             src="/church.png"
+             src="/experience/church/church.png"
              alt="St. Mark's logo"
              width={700}
              height={220}
@@ -55,21 +55,21 @@ export default function Home() {
 
        <section className="grid grid-cols-1 gap-4 md:grid-cols-3">
          <Image
-           src="/IMG_9701.JPG"
+           src="/experience/church/mixer.JPG"
            alt="Church soundboard"
            width={960}
            height={1280}
            className="h-full w-full rounded-lg object-cover shadow"
          />
          <Image
-           src="/IMG_9702.JPG"
+           src="/experience/church/livestream.JPG"
            alt="Interior view of St. Mark's church"
            width={960}
            height={1280}
            className="h-full w-full rounded-lg object-cover shadow"
          />
          <Image
-           src="/IMG_9703.JPG"
+           src="/experience/church/setup.JPG"
            alt="Additional interior view of St. Mark's church"
            width={960}
            height={1280}

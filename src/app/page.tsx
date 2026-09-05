@@ -75,7 +75,7 @@ export default function Home() {
           <div className="flex flex-1 justify-center items-center md:basis-[20%] min-h-0 mx-2">
             <Image
               className="rounded-2xl w-auto h-[80vh] object-cover" 
-              src="/doll.jpg"
+              src="/home/doll.jpg"
               alt="me, John Doll"
               width={4000}
               height={6000}

@@ -12,7 +12,7 @@ export default function Home() {
       <h1 className="text-3xl font-bold mb-6">Lutron</h1>
       <div className="relative w-full max-w-2xl aspect-video">
         <Image
-          src="/lutron.png"
+          src="/experience/lutron/lutron.png"
           alt="Lutron logo"
           fill
           className="object-contain brightness-0 invert"

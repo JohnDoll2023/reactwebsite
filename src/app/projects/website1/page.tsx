@@ -11,27 +11,27 @@ export const generateMetadata = () => {
 
 const pageScreenshots = [
   {
-    src: "/website1/indexbig.png",
+    src: "/projects/website1/indexbig.png",
     alt: "Website 1.0 home page screenshot",
     title: "Home",
   },
   {
-    src: "/website1/projects.png",
+    src: "/projects/website1/projects.png",
     alt: "Website 1.0 projects page screenshot",
     title: "Projects",
   },
   {
-    src: "/website1/resume.png",
+    src: "/projects/website1/resume.png",
     alt: "Website 1.0 resume page screenshot",
     title: "Resume",
   },
   {
-    src: "/website1/qualifications.png",
+    src: "/projects/website1/qualifications.png",
     alt: "Website 1.0 qualifications page screenshot",
     title: "Qualifications",
   },
   {
-    src: "/website1/contact.png",
+    src: "/projects/website1/contact.png",
     alt: "Website 1.0 contact page screenshot",
     title: "Contact",
   },
