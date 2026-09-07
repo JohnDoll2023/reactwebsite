@@ -9,7 +9,17 @@ export const generateMetadata = () => {
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col pt-8">
+    <div className="flex flex-1 justify-center p-6 md:p-10">
+      <main className="w-full max-w-6xl space-y-10">
+        <header className="mx-auto max-w-3xl space-y-4 text-center">
+          <h1>Education</h1>
+          <p className="text-base leading-8 md:text-lg">
+            My education has given me the foundation to grow as an engineer and a problem solver.
+            As a lifelong learner, each of these institutions has been pivotal for my growth.
+          </p>
+        </header>
+        <div className="flex flex-1 flex-col">
+
       {/* Mobile: Stacked by school, Desktop: 3 rows */}
       
       {/* Wapakoneta Section */}
@@ -146,6 +156,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+        </div>
+      </main>
     </div>
   );
 }
