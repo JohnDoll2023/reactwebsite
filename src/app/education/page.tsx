@@ -30,7 +30,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="mx-12">
-          <p className="text-lg">Neil Armstrong and I have one thing in common, and it's this high school.</p>
+          <p className="text-lg">Neil Armstrong and I have one thing in common, and it&apos;s this high school.</p>
         </div>
       </div>
 
@@ -74,7 +74,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="mx-12">
-          <p className="text-lg">I'll think of something clever to put here when I graduate.</p>
+          <p className="text-lg">I&apos;ll think of something clever to put here when I graduate.</p>
         </div>
       </div>
 
@@ -136,13 +136,13 @@ export default function Home() {
         {/* Descriptions Row */}
         <div className="flex flex-row justify-evenly">
           <div className="flex-1 mx-12">
-            <p className="text-lg">Neil Armstrong and I have one thing in common, and it's this high school.</p>
+            <p className="text-lg">Neil Armstrong and I have one thing in common, and it&apos;s this high school.</p>
           </div>
           <div className="flex-1 mx-12">
             <p className="text-lg">"Oh you went to the U? Me too!" - Everyone in Florida</p>
           </div>
           <div className="flex-1 mx-12">
-            <p className="text-lg">I'll think of something clever to put here when I graduate.</p>
+            <p className="text-lg">I&apos;ll think of something clever to put here when I graduate.</p>
           </div>
         </div>
       </div>

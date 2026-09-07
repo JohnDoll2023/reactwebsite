@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import Link from 'next/link';
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import AutoScroll from 'embla-carousel-auto-scroll';
@@ -77,11 +78,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className={`embla__container ${!shouldAutoScroll ? 'embla__container--centered' : ''}`}>
           {slides.map((slide, index) => (
             <div className="embla__slide" key={index}>
-              <a href={slide.link} className="embla__slide__link">
+              <Link href={slide.link} className="embla__slide__link">
                 <div className="embla__slide__number">
                   <span>{slide.label}</span>
                 </div>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

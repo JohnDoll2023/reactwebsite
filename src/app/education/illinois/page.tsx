@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export const generateMetadata = () => {
     return {
@@ -62,7 +61,7 @@ export default function Home() {
           known for its strong engineering and computer science programs. 
         </p>
         <div className="relative w-full max-w-2xl aspect-video order-1 md:order-2 md:my-0 my-4">
-          <Link href="https://illinois.edu" target="_blank" title="Visit University of Illinois website" className="transition-opacity hover:opacity-80">
+          <a href="https://illinois.edu" target="_blank" rel="noreferrer" title="Visit University of Illinois website" className="transition-opacity hover:opacity-80">
             <Image
               src="/education/illinois.png"
               alt="University of Illinois block I logo"
@@ -70,7 +69,7 @@ export default function Home() {
               className="object-contain"
               priority
             />
-          </Link>
+          </a>
         </div>
         <p className="flex-1 text-xl text-left order-3 md:order-3 md:mt-0 mt-7">
           Funny enough, the first time I visited campus (Urbana-Champaign) was as a recruiter for Lutron while I was already in the midst of my first semester.
@@ -89,9 +88,9 @@ export default function Home() {
             <div className="flex-1 text-xl text-left">
               {completedCourses.map((course) => (
                 <p key={course.label}>
-                  <Link href={course.href} target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">
+                  <a href={course.href} target="_blank" rel="noreferrer" className="font-semibold text-[#255230] underline underline-offset-4">
                     {course.label}
-                  </Link>
+                  </a>
                 </p>
               ))}
             </div>
@@ -102,9 +101,9 @@ export default function Home() {
             <div className="flex-1 text-xl">
               {transferredCourses.map((course) => (
                 <p key={course.label}>
-                  <Link href={course.href} target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">
+                  <a href={course.href} target="_blank" rel="noreferrer" className="font-semibold text-[#255230] underline underline-offset-4">
                     {course.label}
-                  </Link>
+                  </a>
                 </p>
               ))}
             </div>
@@ -118,9 +117,9 @@ export default function Home() {
               <div className="flex-1 text-xl text-left">
                 {completedCourses.slice(0, 4).map((course) => (
                   <p key={course.label}>
-                    <Link href={course.href} target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">
+                    <a href={course.href} target="_blank" rel="noreferrer" className="font-semibold text-[#255230] underline underline-offset-4">
                       {course.label}
-                    </Link>
+                    </a>
                   </p>
                 ))}
               </div>
@@ -131,9 +130,9 @@ export default function Home() {
               <div className="flex-1 text-xl text-left">
                 {completedCourses.slice(4).map((course) => (
                   <p key={course.label}>
-                    <Link href={course.href} target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">
+                    <a href={course.href} target="_blank" rel="noreferrer" className="font-semibold text-[#255230] underline underline-offset-4">
                       {course.label}
-                    </Link>
+                    </a>
                   </p>
                 ))}
               </div>
@@ -146,9 +145,9 @@ export default function Home() {
               <div className="flex-1 text-xl">
                 {transferredCourses.map((course) => (
                   <p key={course.label}>
-                    <Link href={course.href} target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">
+                    <a href={course.href} target="_blank" rel="noreferrer" className="font-semibold text-[#255230] underline underline-offset-4">
                       {course.label}
-                    </Link>
+                    </a>
                   </p>
                 ))}
               </div>

@@ -20,7 +20,7 @@ export default function Home() {
                 The page you are looking for could not be found.
             </h1>
             <br></br>
-            <h2 className="md:text-3xl text-xl text-center">Please let me know if I've made a mistake using the <Link href="/contact" className="text-blue-500">contact page</Link>!</h2>
+            <h2 className="md:text-3xl text-xl text-center">Please let me know if I&apos;ve made a mistake using the <Link href="/contact" className="text-blue-500">contact page</Link>!</h2>
         </div>
     );
 }

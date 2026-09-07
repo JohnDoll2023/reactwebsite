@@ -80,14 +80,14 @@ export default function Home() {
         <section className="grid gap-6 rounded-[1.5rem] border border-slate-200 bg-white/90 p-6 shadow-sm md:grid-cols-2 md:items-center md:p-8">
           <p className="order-2 text-sm leading-7 text-slate-700 md:order-1 md:text-base">
             Originally, I hosted my website using{" "}
-            <Link
+            <a
               href="https://www.hostgator.com"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-[#255230] underline underline-offset-4"
             >
               HostGator
-            </Link>
+            </a>
             . It did the job just fine. I didn&apos;t realize it at the time, but it was much more
             expensive than other options out there. Upon getting my{" "}
             <Link
@@ -137,7 +137,7 @@ export default function Home() {
             and made enhancements and changes as I saw fit. First, I wanted to create a good product
             that to your average person looked pretty darn good. Then, I went back, tidied up,
             got rid of any existing bugs, and did some beautification, especially for the mobile
-            end. In hindsight, I know this website wasn't the best, but it was much better than website 1.0,
+            end. In hindsight, I know this website wasn&apos;t the best, but it was much better than website 1.0,
             and I was able to use a lot more skills all-around to build it, with a bigger vision.
           </p>
         </section>

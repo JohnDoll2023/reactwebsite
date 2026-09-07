@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 export const generateMetadata = () => {
     return {
       title: 'John Doll | Wapak',
@@ -12,7 +11,7 @@ export default function Home() {
       <h2 className="text-center">{"Wapak High School (Fall '15 - Spring '19)"}</h2>
       <div className="grid w-full max-w-6xl flex-1 grid-cols-1 gap-8 md:grid-cols-2 md:grid-rows-2">
         <div className="relative min-h-64 w-full">
-          <Link href="https://wapak.org" target="_blank" title="Visit Wapakoneta High School website" className="transition-opacity hover:opacity-80">
+          <a href="https://wapak.org" target="_blank" rel="noreferrer" title="Visit Wapakoneta High School website" className="transition-opacity hover:opacity-80">
             <Image
               src="/education/wapakW.png"
               alt="Wapakoneta High School logo"
@@ -20,12 +19,12 @@ export default function Home() {
               className="object-contain"
               priority
             />
-          </Link>
+          </a>
         </div>
         <p className="self-center text-left text-xl">
           High school was a memorable experience, and I actually miss it jusssstttt a little.
           It felt like each of my teachers was one-in-a-million, and it made the days all the more enjoyable.
-          From our <Link href="https://www.youtube.com/watch?v=1Y_6K8NwmRw" target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">AP Statistics music video</Link>, to our <Link href="https://www.youtube.com/watch?v=pmzMBAo3Ics" target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">Zoology invertebrate project video</Link>, or any of our countless editions of <Link href="https://www.youtube.com/watch?v=2WbyOv6qIR8" target="_blank" className="font-semibold text-[#255230] underline underline-offset-4">Daily Tennis</Link>, my friends and I stayed busy having fun.
+          From our <a href="https://www.youtube.com/watch?v=1Y_6K8NwmRw" target="_blank" rel="noreferrer" className="font-semibold text-[#255230] underline underline-offset-4">AP Statistics music video</a>, to our <a href="https://www.youtube.com/watch?v=pmzMBAo3Ics" target="_blank" rel="noreferrer" className="font-semibold text-[#255230] underline underline-offset-4">Zoology invertebrate project video</a>, or any of our countless editions of <a href="https://www.youtube.com/watch?v=2WbyOv6qIR8" target="_blank" rel="noreferrer" className="font-semibold text-[#255230] underline underline-offset-4">Daily Tennis</a>, my friends and I stayed busy having fun.
         </p>
         <p className="text-left text-xl">
           I was highly involved in my teenage years, running cross country in the fall, being a part of academic team in the winter/spring, and playing tennis in the spring.
