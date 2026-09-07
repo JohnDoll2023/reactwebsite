@@ -46,7 +46,7 @@ export function ContactForm() {
             Say hi or ask a question.
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300 md:text-lg">
-            Use the form below and I’ll get back to you as soon as I can.
+            Use the form below and I&apos;ll get back to you as soon as I can.
           </p>
         </div>
 
@@ -104,7 +104,7 @@ export function ContactForm() {
                 name="message"
                 required
                 rows={7}
-                placeholder="What’s on your mind?"
+                placeholder="What's on your mind?"
                 className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-slate-400 outline-none transition focus:border-emerald-300 focus:bg-white/10"
               />
             </div>

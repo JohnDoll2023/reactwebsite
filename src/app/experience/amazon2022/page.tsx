@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const generateMetadata = () => ({
   title: "John Doll | Amazon (2022)",
@@ -89,7 +90,7 @@ export default function Amazon2022Page() {
           </a>
           <p className="mx-auto max-w-3xl text-left text-lg leading-8">
             This internship marked my second with Amazon. My{" "}
-            <a href="/experience/amazon2021" className="font-semibold text-[#255230] underline underline-offset-4">first</a> was in Seattle working
+            <Link href="/experience/amazon2021" className="font-semibold text-[#255230] underline underline-offset-4">first</Link> was in Seattle working
             on Amazon Go technology. This summer, I switched to Silicon Valley
             and joined the{" "}
             <a href="https://github.com/deepjavalibrary/djl" target="_blank" rel="noreferrer" className="font-semibold text-[#255230] underline underline-offset-4">
