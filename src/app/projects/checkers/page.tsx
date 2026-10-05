@@ -8,13 +8,13 @@ export const generateMetadata = () => {
 
 export default function Home() {
   return (
-    <main className="flex-1 bg-[radial-gradient(circle_at_top,_rgba(37,82,48,0.14),_transparent_40%),linear-gradient(180deg,#f8faf6_0%,#eef4ea_48%,#ffffff_100%)] text-slate-900">
+    <main className="flex-1 bg-[#171717] text-white">
       <section className="mx-auto flex w-full max-w-[90rem] flex-col gap-8 px-4 py-8 md:px-8 lg:px-10">
-        <div className="rounded-[2rem] border border-slate-200/70 bg-white/90 p-6 shadow-[0_20px_80px_rgba(15,23,42,0.12)] backdrop-blur md:p-10">
-          <h1 className="text-4xl font-black tracking-tight text-slate-950 md:text-6xl">
+        <div className="rounded-[2rem] border border-white/10 bg-slate-950/85 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur md:p-10">
+          <h1 className="text-4xl font-black tracking-tight text-white md:text-6xl">
             Checkers
           </h1>
-          <p className="mt-6 text-base leading-7 text-slate-700 md:text-lg">
+          <p className="mt-6 text-base leading-7 text-slate-300 md:text-lg">
             If there is one project that made me feel like I had passed a point
             of no return, it is this one. This project was the biggest one I had
             built at the time of creation and required the most thought and
@@ -37,13 +37,13 @@ export default function Home() {
             alt="Picture of checkers code"
             width={1200}
             height={900}
-            className="h-auto w-full rounded-2xl border border-slate-200 bg-white shadow-sm"
+            className="h-auto w-full rounded-2xl border border-white/10 bg-slate-950/85 shadow-sm"
           />
           <video
             controls
             autoPlay
             muted
-            className="h-full w-full rounded-2xl border border-slate-200 bg-white object-cover shadow-sm"
+            className="h-full w-full rounded-2xl border border-white/10 bg-slate-950/85 object-cover shadow-sm"
           >
             <source src="/projects/checkers/checkers.mov" type="video/mp4" />
             Your browser does not support HTML video.
@@ -53,12 +53,12 @@ export default function Home() {
             alt="Checkers game board"
             width={1200}
             height={900}
-            className="h-auto w-full rounded-2xl border border-slate-200 bg-white shadow-sm"
+            className="h-auto w-full rounded-2xl border border-white/10 bg-slate-950/85 shadow-sm"
           />
         </div>
 
-        <div className="rounded-[1.5rem] border border-slate-200/70 bg-white/90 p-6 shadow-sm md:p-8">
-          <p className="text-base leading-7 text-slate-700 md:text-lg">
+        <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/85 p-6 shadow-sm md:p-8">
+          <p className="text-base leading-7 text-slate-300 md:text-lg">
             I&apos;ll admit that I also put off till the final weekend what was the
             biggest project of my life up to that point. It was a grind, but in
             one weekend I was able to pump out this project with just under a
@@ -71,12 +71,12 @@ export default function Home() {
             only for getting the graphics to properly adjust, but because I also
             had to change how I received mouse-clicking inputs.
           </p>
-          <p className="mt-4 text-base leading-7 text-slate-700 md:text-lg">
+          <p className="mt-4 text-base leading-7 text-slate-300 md:text-lg">
             You can download the game and play it for yourself{" "}
             <a
               href="/projects/checkers/Checkergame.jar"
               download="Checkers"
-              className="font-semibold text-[#255230] underline underline-offset-4"
+              className="font-semibold text-slate-200 underline underline-offset-4"
             >
               here
             </a>

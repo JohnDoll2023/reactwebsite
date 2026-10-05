@@ -9,9 +9,9 @@ export const generateMetadata = () => {
 
 export default function Home() {
   return (
-    <main className="flex-1 overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(37,82,48,0.14),_transparent_40%),linear-gradient(180deg,#f8faf6_0%,#eef4ea_48%,#ffffff_100%)] text-slate-900">
+    <main className="flex-1 overflow-hidden bg-[#171717] text-white">
       <section className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-8 md:px-8 lg:px-10">
-        <div className="grid gap-8 rounded-[2rem] border border-slate-200/70 bg-white/90 p-6 shadow-[0_20px_80px_rgba(15,23,42,0.12)] backdrop-blur md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] md:items-center md:p-10">
+        <div className="grid gap-8 rounded-[2rem] border border-white/10 bg-slate-950/85 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] md:items-center md:p-10">
           <Image
             className="h-auto w-full rounded-2xl object-cover shadow-lg"
             src="/projects/website2/website.png"
@@ -21,24 +21,24 @@ export default function Home() {
             priority
           />
           <div className="space-y-5">
-            <h1 className="text-4xl font-black tracking-tight text-slate-950 md:text-6xl">
+            <h1 className="text-4xl font-black tracking-tight text-white md:text-6xl">
               Website 2.0
             </h1>
-            <p className="text-base leading-7 text-slate-700 md:text-lg">
+            <p className="text-base leading-7 text-slate-300 md:text-lg">
               My second personal public facing website, and the latest to be deprecated.
             </p>
           </div>
         </div>
 
-        <section className="rounded-[1.5rem] border border-[#255230]/20 bg-[#255230]/8 p-6 shadow-sm md:p-8">
-          <h2 className="text-2xl font-black text-slate-950 md:text-3xl">
+        <section className="rounded-[1.5rem] border border-white/10 bg-slate-900 p-6 shadow-sm md:p-8">
+          <h2 className="text-2xl font-black text-white md:text-3xl">
             History of this Website
           </h2>
-          <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
+          <p className="mt-4 text-sm leading-7 text-slate-300 md:text-base">
             I actually had the idea to make a new website shortly after beginning work on{" "}
             <Link
               href="/projects/website1"
-              className="font-semibold text-[#255230] underline underline-offset-4"
+              className="font-semibold text-slate-200 underline underline-offset-4"
             >
               my first site
             </Link>
@@ -56,7 +56,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="grid gap-6 rounded-[1.5rem] border border-slate-200 bg-white/90 p-6 shadow-sm md:grid-cols-2 md:items-center md:p-8">
+        <section className="grid gap-6 rounded-[1.5rem] border border-white/10 bg-slate-950/85 p-6 shadow-sm md:grid-cols-2 md:items-center md:p-8">
           <Image
             className="h-auto w-full rounded-xl object-contain"
             src="/projects/website2/code.png"
@@ -64,7 +64,7 @@ export default function Home() {
             width={800}
             height={520}
           />
-          <p className="text-sm leading-7 text-slate-700 md:text-base">
+          <p className="text-sm leading-7 text-slate-300 md:text-base">
             I created my first website without the use of Bootstrap. Compared to that experience, Bootstrap saved my
             life. You wouldn&apos;t believe the pain I felt when I figured out that creating a
             navigation bar could be done with just a few lines in Bootstrap, after I had spent an
@@ -77,14 +77,14 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="grid gap-6 rounded-[1.5rem] border border-slate-200 bg-white/90 p-6 shadow-sm md:grid-cols-2 md:items-center md:p-8">
-          <p className="order-2 text-sm leading-7 text-slate-700 md:order-1 md:text-base">
+        <section className="grid gap-6 rounded-[1.5rem] border border-white/10 bg-slate-950/85 p-6 shadow-sm md:grid-cols-2 md:items-center md:p-8">
+          <p className="order-2 text-sm leading-7 text-slate-300 md:order-1 md:text-base">
             Originally, I hosted my website using{" "}
             <a
               href="https://www.hostgator.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-[#255230] underline underline-offset-4"
+              className="font-semibold text-slate-200 underline underline-offset-4"
             >
               HostGator
             </a>
@@ -92,7 +92,7 @@ export default function Home() {
             expensive than other options out there. Upon getting my{" "}
             <Link
               href="/experience/amazon2021"
-              className="font-semibold text-[#255230] underline underline-offset-4"
+              className="font-semibold text-slate-200 underline underline-offset-4"
             >
               internship at Amazon
             </Link>
@@ -120,7 +120,7 @@ export default function Home() {
           />
         </section>
 
-        <section className="grid gap-6 rounded-[1.5rem] border border-slate-200 bg-white/90 p-6 shadow-sm md:grid-cols-2 md:items-center md:p-8">
+        <section className="grid gap-6 rounded-[1.5rem] border border-white/10 bg-slate-950/85 p-6 shadow-sm md:grid-cols-2 md:items-center md:p-8">
           <Image
             className="h-auto w-full rounded-xl object-contain"
             src="/projects/website2/history.png"
@@ -128,7 +128,7 @@ export default function Home() {
             width={2204}
             height={1700}
           />
-          <p className="text-sm leading-7 text-slate-700 md:text-base">
+          <p className="text-sm leading-7 text-slate-300 md:text-base">
             I used a combination of the developer tab in Chrome and Visual Studio Code to do my
             development. I started with just the 5 webpages and slowly expanded to a smaller version of the website I have today.
             At the time of creation, my website 1.0 had content on the five main
