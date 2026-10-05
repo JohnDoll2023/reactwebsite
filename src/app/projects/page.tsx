@@ -58,13 +58,13 @@ const projects = [
 
 export default function ProjectsOverview() {
   return (
-    <main className="flex-1 bg-[radial-gradient(circle_at_top,_rgba(37,82,48,0.14),_transparent_40%),linear-gradient(180deg,#f8faf6_0%,#eef4ea_48%,#ffffff_100%)] text-slate-900">
+    <main className="flex-1 bg-[#171717] text-white">
       <section className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-8 md:px-8 lg:px-10">
-        <header className="rounded-[2rem] border border-slate-200/70 bg-white/90 p-6 text-center shadow-[0_20px_80px_rgba(15,23,42,0.12)] backdrop-blur md:p-10">
-          <h1 className="text-4xl font-black tracking-tight text-slate-950 md:text-6xl">
+        <header className="rounded-[2rem] border border-white/10 bg-slate-950/85 p-6 text-center shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur md:p-10">
+          <h1 className="text-4xl font-black tracking-tight text-white md:text-6xl">
             Projects
           </h1>
-          <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-slate-700 md:text-lg">
+          <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-slate-300 md:text-lg">
             Explore projects I have built while learning software development,
             web development, and data visualization.
           </p>
@@ -75,11 +75,11 @@ export default function ProjectsOverview() {
             <Link
               key={project.href}
               href={project.href}
-              className={`${styles.project} group grid items-center gap-6 rounded-[1.5rem] border border-slate-200/70 bg-white/90 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl md:grid-cols-2 md:p-7`}
+              className={`${styles.project} group grid items-center gap-6 rounded-[1.5rem] border border-white/10 bg-slate-950/85 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl md:grid-cols-2 md:p-7`}
               style={{ animationDelay: `${1 + index * 1.5}s` }}
             >
               <div
-                className={`relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 ${
+                className={`relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-900 ${
                   index % 2 === 1 ? "md:order-last" : "md:order-first"
                 }`}
               >
@@ -92,10 +92,10 @@ export default function ProjectsOverview() {
                 />
               </div>
               <div className={index % 2 === 1 ? "md:order-first md:text-right" : "md:order-last"}>
-                <h2 className="text-2xl font-black tracking-tight text-slate-950 md:text-4xl">
+                <h2 className="text-2xl font-black tracking-tight text-white md:text-4xl">
                   {project.title}
                 </h2>
-                <p className="mt-4 text-base leading-7 text-slate-700 md:text-lg">
+                <p className="mt-4 text-base leading-7 text-slate-300 md:text-lg">
                   {project.description}
                 </p>
               </div>

@@ -39,14 +39,14 @@ const pageScreenshots = [
 
 export default function Home() {
   return (
-    <main className="flex-1 overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(37,82,48,0.14),_transparent_40%),linear-gradient(180deg,#f8faf6_0%,#eef4ea_48%,#ffffff_100%)] text-slate-900">
+    <main className="flex-1 overflow-hidden bg-[#171717] text-white">
       <section className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-8 md:px-8 lg:px-10">
-        <div className="rounded-[2rem] border border-slate-200/70 bg-white/90 p-6 shadow-[0_20px_80px_rgba(15,23,42,0.12)] backdrop-blur md:p-10">
+        <div className="rounded-[2rem] border border-white/10 bg-slate-950/85 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur md:p-10">
           <div className="space-y-5">
-            <h1 className="text-4xl font-black tracking-tight text-slate-950 md:text-6xl">
+            <h1 className="text-4xl font-black tracking-tight text-white md:text-6xl">
               Website 1.0
             </h1>
-            <p className="max-w-4xl text-base leading-7 text-slate-700 md:text-lg">
+            <p className="max-w-4xl text-base leading-7 text-slate-300 md:text-lg">
               This is my first ever public-facing website. The pages shown are everything included
               in the old site: Home, Projects, Resume, Qualifications, and
               Contact.
@@ -56,9 +56,9 @@ export default function Home() {
 
         <ScreenshotGallery screenshots={pageScreenshots} />
 
-        <div className="rounded-[1.5rem] border border-[#255230]/20 bg-[#255230]/8 p-6 shadow-sm">
-          <h2 className="text-2xl font-black text-slate-950">Website timeline</h2>
-          <p className="mt-4 text-sm leading-7 text-slate-700">
+        <div className="rounded-[1.5rem] border border-white/10 bg-slate-900 p-6 shadow-sm">
+          <h2 className="text-2xl font-black text-white">Website timeline</h2>
+          <p className="mt-4 text-sm leading-7 text-slate-300">
             I built this website in the middle of my sophomore year of college in late 2020 using only HTML, CSS, and JavaScript. 
             It was simple and foundational, and it wasn&apos;t pretty, the backend was where I was learning the most, and was what I really care about.
             I started to scratch the surface with AWS and cloud computing.The frontend was proof that the backend was working. 
@@ -66,12 +66,12 @@ export default function Home() {
           <div className="mt-4 flex flex-wrap gap-3">
             <Link
               href="/projects/website2"
-              className="rounded-full border border-[#255230]/20 bg-white px-4 py-2 text-sm font-semibold text-[#255230] transition hover:border-[#255230]/40 hover:bg-[#f5faf3]"            >
+              className="rounded-full border border-white/20 bg-slate-950/85 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-white/40 hover:bg-white/10"            >
               View Website 2.0
             </Link>
             <Link
               href="/projects/website3"
-              className="rounded-full border border-[#255230]/20 bg-white px-4 py-2 text-sm font-semibold text-[#255230] transition hover:border-[#255230]/40 hover:bg-[#f5faf3]"
+              className="rounded-full border border-white/20 bg-slate-950/85 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-white/40 hover:bg-white/10"
             >
               View Website 3.0
             </Link>

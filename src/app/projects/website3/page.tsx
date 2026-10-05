@@ -6,10 +6,10 @@ export const generateMetadata = () => {
 
 export default function Home() {
     return (
-      <main className="flex-1 bg-[radial-gradient(circle_at_top,_rgba(37,82,48,0.14),_transparent_40%),linear-gradient(180deg,#f8faf6_0%,#eef4ea_48%,#ffffff_100%)] text-slate-900">
+      <main className="flex-1 bg-[#171717] text-white">
         <section className="mx-auto flex w-full max-w-[90rem] flex-col gap-8 px-4 py-8 md:px-8 lg:px-10">
-          <div className="rounded-[2rem] border border-slate-200/70 bg-white/90 p-6 shadow-[0_20px_80px_rgba(15,23,42,0.12)] backdrop-blur md:p-10">
-            <div className="space-y-6 text-base leading-7 text-slate-700 md:text-lg">
+          <div className="rounded-[2rem] border border-white/10 bg-slate-950/85 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur md:p-10">
+            <div className="space-y-6 text-base leading-7 text-slate-300 md:text-lg">
               <p>
                 The third iteration of my personal website, I created this website to show new experiences in a more personalized way.
                 The last two versions had my stories that I wanted to share, but the websites felt too plain, and not enough like me.

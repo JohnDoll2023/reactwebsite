@@ -39,9 +39,9 @@ export default function ScreenshotGallery({ screenshots }: ScreenshotGalleryProp
             key={shot.src}
             type="button"
             onClick={() => setActiveIndex(index)}
-            className="group block overflow-hidden rounded-3xl border border-slate-200 bg-white text-left shadow-sm transition hover:shadow-xl"
+            className="group block overflow-hidden rounded-3xl border border-white/10 bg-slate-950/85 text-left shadow-sm transition hover:shadow-xl"
           >
-            <div className="relative aspect-[4/3] overflow-hidden bg-slate-100 p-3">
+            <div className="relative aspect-[4/3] overflow-hidden bg-slate-900 p-3">
               <Image
                 src={shot.src}
                 alt={shot.alt}
@@ -52,10 +52,10 @@ export default function ScreenshotGallery({ screenshots }: ScreenshotGalleryProp
               />
             </div>
             <div className="flex items-center justify-between px-4 py-3 text-sm">
-              <span className="font-semibold text-slate-900">
+              <span className="font-semibold text-white">
                 {index + 1}. {shot.title}
               </span>
-              <span className="text-slate-500">Click to enlarge</span>
+              <span className="text-slate-400">Click to enlarge</span>
             </div>
           </button>
         ))}
