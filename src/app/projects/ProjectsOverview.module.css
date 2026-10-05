@@ -1,0 +1,23 @@
+.project {
+  opacity: 0;
+  animation: projectFadeIn 700ms ease-out forwards;
+}
+
+@keyframes projectFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project {
+    opacity: 1;
+    animation: none;
+  }
+}
