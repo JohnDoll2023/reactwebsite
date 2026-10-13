@@ -54,7 +54,7 @@ export default function Home() {
 
         <section className="space-y-5 text-base leading-8 md:text-lg">
           <p>
-            I started at Lutron Electronics in June 2023 shortly after <Link href="/education/miami" className="font-semibold text-[#255230] underline underline-offset-4">graduating from Miami</Link> and have learned more than I ever could have fathomed.
+            I decided to take my talents to South Beach, starting at Lutron Electronics in June 2023 shortly after <Link href="/education/miami" className="font-semibold text-[#255230] underline underline-offset-4">graduating from Miami</Link> and have learned more than I ever could have fathomed.
             In my fourth year with the company, I have had two different team leads across four software teams.
             I organize my office&apos;s 5Ks as well as orchestrate our recruiting efforts at my alma mater.
           </p>

@@ -60,8 +60,8 @@ export default function Home() {
           <h2 className="text-2xl font-black text-white">Website timeline</h2>
           <p className="mt-4 text-sm leading-7 text-slate-300">
             I built this website in the middle of my sophomore year of college in late 2020 using only HTML, CSS, and JavaScript. 
-            It was simple and foundational, and it wasn&apos;t pretty, the backend was where I was learning the most, and was what I really care about.
-            I started to scratch the surface with AWS and cloud computing.The frontend was proof that the backend was working. 
+            It was simple and foundational, and it wasn&apos;t pretty; the backend was where I was learning the most, and it was what I really cared about.
+            I started to scratch the surface with AWS and cloud computing. The frontend was proof that the backend was working.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
             <Link
