@@ -24,8 +24,8 @@ export default function Home() {
               </p>
 
               <p>
-                This website is built using React, NextJS, TailwindCSS, and TypeScript.
-                This is my first time using React and NextJS, and I chose them specifically to learn more about them in a personal, real-world project.
+                This website is built using React, Next.js, Tailwind CSS, and TypeScript.
+                This is my first time using React and Next.js, which I chose specifically to learn more about them in a personal, real-world project.
                 I have also put a lot of effort into learning the GitHub workflow, using projects, GitHub Actions, PR&apos;s, Issues, etc. in order to understand how others may use it in a production environment.
                 As a DevOps engineer, figuring out the automation associated with these things was fascinating to me.
               </p>

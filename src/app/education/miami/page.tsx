@@ -37,7 +37,7 @@ export default function Home() {
 
         <section className="space-y-5 text-base leading-8 md:text-lg">
           <p>
-            With high school graduation approacing, I started to tell my
+            With high school graduation approaching, I started to tell my
             parents I wasn&apos;t sure that my college experience would be able
             to top high school. I loved the relationships I had and classes I
             took throughout my four years at Wapak. I dipped my toes into
@@ -66,7 +66,7 @@ export default function Home() {
             </p>
             <p>
               In the Fall of 2020, I volunteered and was lucky enough to be
-              selected as an Undergraudate Associate for a section of
+              selected as an Undergraduate Associate for a section of
               Computing, Engineering, and Society (CEC 101). Two other UA&apos;s
               (who happened to be my friends) and I were responsible for most
               things outside the classroom except for grading. We would host
@@ -78,7 +78,7 @@ export default function Home() {
               to gain a new perspective. It has helped me to better understand
               and connect with my professors as I now know the struggles they
               face and as a student have more to offer to the professor having
-              taken a position similar to theirs. Other responsbilities we had
+              taken a position similar to theirs. Other responsibilities we had
               as UA&apos;s was creating and distributing weekly newsletters with
               topics ranging from the class specifically to university-wide
               events. Additionally, we were &quot;buddies&quot; with the first-year

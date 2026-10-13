@@ -20,7 +20,7 @@ export default function Home() {
             Fall Semester finals when our professor reached out to some of us asking if we wanted to expand our final 
             project into the dashboard you see here. I had the opportunity to lead the team along with another student, 
             and we met every day during the development process to iron out all the details. We got feedback from our advisor, 
-            the Butler County Health Commisioner, and several others without connections to statistics in order to make our 
+            the Butler County Health Commissioner, and several others without connections to statistics in order to make our 
             web application a useful tool for anyone who wanted to use it. The dashboard was published before Christmas 2020 
             and has had a few minor updates since then, especially concerning data retrieval since the State of Ohio changed 
             the way they report case metrics. There have been no major changes to design or features of the dashboard. 

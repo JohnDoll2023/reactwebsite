@@ -25,7 +25,7 @@ export default function Home() {
               Website 2.0
             </h1>
             <p className="text-base leading-7 text-slate-300 md:text-lg">
-              My second personal public facing website, and the latest to be deprecated.
+              My second personal public-facing website, and the latest to be deprecated.
             </p>
           </div>
         </div>

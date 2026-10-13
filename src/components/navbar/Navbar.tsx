@@ -13,7 +13,7 @@ const dropdowns = {
         { href: "/projects/website1", label: "Website 1.0" },
         { href: "/projects/covid", label: "COVID Dashboard" },
         { href: "/projects/checkers", label: "Checkers" },
-        { href: "/projects/dailytennis", label: "Daily Tennis" },
+        /*{ href: "/projects/dailytennis", label: "Daily Tennis" },*/
     ],
     education: [
         { href: "/education", label: "Education Overview" },
