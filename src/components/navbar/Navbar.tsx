@@ -78,7 +78,7 @@ export const Navbar = () => {
                 <Link href="/" className="mr-5 ml-2">
                     <Image
                         className="rounded-md navbar-image"
-                        src="/nav/headshot.jpg"
+                        src="/nav/headshot.JPG"
                         alt="John Doll"
                         width={50}
                         height={50}
