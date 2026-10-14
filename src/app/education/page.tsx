@@ -62,7 +62,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="mx-12">
-          <p className="text-lg">"Oh you went to the U? Me too!" - Everyone in Florida</p>
+          <p className="text-lg">&quot;Oh you went to the U? Me too!&quot; - Everyone in Florida</p>
         </div>
       </div>
 
@@ -149,7 +149,7 @@ export default function Home() {
             <p className="text-lg">Neil Armstrong and I have one thing in common, and it&apos;s this high school.</p>
           </div>
           <div className="flex-1 mx-12">
-            <p className="text-lg">"Oh you went to the U? Me too!" - Everyone in Florida</p>
+            <p className="text-lg">&quot;Oh you went to the U? Me too!&quot; - Everyone in Florida</p>
           </div>
           <div className="flex-1 mx-12">
             <p className="text-lg">I&apos;ll think of something clever to put here when I graduate.</p>

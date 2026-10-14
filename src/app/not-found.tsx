@@ -1,12 +1,5 @@
 import Link from "next/link";
 
-const links = {
-    projects: "/projects",
-    education: "/education",
-    experience: "/experience",
-    resume: "/resume",
-}
-
 export const generateMetadata = () => {
     return {
         title: 'John Doll | Where am I',
