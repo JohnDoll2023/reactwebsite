@@ -1,14 +1,8 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import AutoScroll from 'embla-carousel-auto-scroll';
-import {
-  NextButton,
-  PrevButton,
-  usePrevNextButtons,
-} from './EmblaCarouselArrowButtons';
-
 type SlideType = {
   label: string;
   link: string;
@@ -39,39 +33,9 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   // Disable auto-scroll only if 3 or fewer slides AND on desktop
   const shouldAutoScroll = slides.length > 3 || isMobile;
   
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, 
+  const [emblaRef] = useEmblaCarousel(options,
     shouldAutoScroll ? [AutoScroll({ playOnInit: true })] : []
   );
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick,
-  } = usePrevNextButtons(emblaApi);
-
-  const toggleAutoplay = useCallback(() => {
-    const autoScroll = emblaApi?.plugins()?.autoScroll;
-    if (!autoScroll) return;
-
-    const playOrStop = autoScroll.isPlaying()
-      ? autoScroll.stop
-      : autoScroll.play;
-    playOrStop();
-  }, [emblaApi]);
-
-  useEffect(() => {
-    const autoScroll = emblaApi?.plugins()?.autoScroll;
-    if (!autoScroll) return;
-
-    setIsPlaying(autoScroll.isPlaying());
-    emblaApi
-      .on('autoScroll:play', () => setIsPlaying(true))
-      .on('autoScroll:stop', () => setIsPlaying(false))
-      .on('reInit', () => setIsPlaying(autoScroll.isPlaying()));
-  }, [emblaApi]);
-
   return (
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
@@ -87,13 +51,6 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           ))}
         </div>
       </div>
-
-      {/* <div className="embla__controls">
-
-        <button className="embla__play" onClick={toggleAutoplay} type="button">
-          {isPlaying ? 'Stop' : 'Start'}
-        </button>
-      </div> */}
     </div>
   );
 };

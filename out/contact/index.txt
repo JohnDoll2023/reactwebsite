@@ -1,0 +1,19 @@
+1:"$Sreact.fragment"
+2:I[6070,["63","static/chunks/63-1eae38593cd556b8.js","874","static/chunks/874-6d278a7d578fa2d3.js","177","static/chunks/app/layout-25ff827802936d4c.js"],"Navbar"]
+3:I[7555,[],""]
+4:I[1295,[],""]
+5:I[6874,["874","static/chunks/874-6d278a7d578fa2d3.js","345","static/chunks/app/not-found-7206177943c9738d.js"],""]
+6:I[9177,["63","static/chunks/63-1eae38593cd556b8.js","874","static/chunks/874-6d278a7d578fa2d3.js","177","static/chunks/app/layout-25ff827802936d4c.js"],"Footer"]
+7:I[5672,["977","static/chunks/app/contact/page-01d0b6b7455c6e42.js"],"ContactForm"]
+8:I[9665,[],"OutletBoundary"]
+b:I[9665,[],"ViewportBoundary"]
+d:I[9665,[],"MetadataBoundary"]
+f:I[6614,[],""]
+:HL["/_next/static/media/22a5144ee8d83bca-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/7d4881bb7e1bf84d-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/8f4dc8006ac67119.css","style"]
+0:{"P":null,"b":"YNNIyTXIYQ-3QFak9Uz2o","p":"","c":["","contact",""],"i":false,"f":[[["",{"children":["contact",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/8f4dc8006ac67119.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_8eaea4 __variable_8c25df antialiased min-h-screen flex flex-col","children":[["$","$L2",null,{}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex flex-1 items-center justify-center flex-col","children":[["$","h1",null,{"className":"md:text-7xl text-2xl text-center","children":"The page you are looking for could not be found."}],["$","br",null,{}],["$","h2",null,{"className":"md:text-3xl text-xl text-center","children":["Please let me know if I've made a mistake using the ",["$","$L5",null,{"href":"/contact","className":"text-blue-500","children":"contact page"}],"!"]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L6",null,{}]]}]}]]}],{"children":["contact",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$L7",null,{}],"$undefined",null,["$","$L8",null,{"children":["$L9","$La",null]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","2JVxRLwoF89h-9AU248IQ",{"children":[["$","$Lb",null,{"children":"$Lc"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],["$","$Ld",null,{"children":"$Le"}]]}],false]],"m":"$undefined","G":["$f","$undefined"],"s":false,"S":true}
+c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+9:null
+a:null
+e:[["$","title","0",{"children":"John Doll | Contact"}],["$","meta","1",{"name":"description","content":"Send John a message about work, questions, or just to say hello."}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"1213x1026"}]]

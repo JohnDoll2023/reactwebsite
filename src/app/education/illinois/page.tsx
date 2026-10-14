@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <div className="flex flex-1 flex-col items-center p-8">
       <div className="order-2 md:order-1">
-        <h2>University of Illinois (Fall '24 - August '26)</h2>
+        <h2>University of Illinois (Fall &apos;24 - August &apos;26)</h2>
       </div>
       <div className="flex flex-1 flex-col md:flex-row items-center order-3 md:order-2">
         <p className="flex-1 text-xl text-left order-2 md:order-1">
