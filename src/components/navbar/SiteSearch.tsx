@@ -65,7 +65,7 @@ function highlight(text: string, query: string) {
   );
 }
 
-export function SiteSearch() {
+export function SiteSearch({ onOpenChange }: { onOpenChange?: (open: boolean) => void }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
@@ -87,7 +87,13 @@ export function SiteSearch() {
         className="site-search-toggle"
         aria-label={open ? "Close site search" : "Open site search"}
         aria-expanded={open}
-        onClick={() => setOpen((current) => !current)}
+        onClick={() => {
+          setOpen((current) => {
+            const nextOpen = !current;
+            onOpenChange?.(nextOpen);
+            return nextOpen;
+          });
+        }}
       >
         <svg aria-hidden="true" viewBox="0 0 24 24">
           <path d="m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" />
