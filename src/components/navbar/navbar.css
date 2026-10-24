@@ -255,10 +255,6 @@ nav li > .mx-10 {
 }
 
 @media (max-width: 1000px) {
-    .group-pager {
-        top: 8.5rem;
-    }
-
     .nav-content ul {
         display: none;
     }
