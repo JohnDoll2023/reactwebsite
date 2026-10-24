@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -38,6 +38,19 @@ export const Navbar = () => {
     const [openDropdown, setOpenDropdown] = useState<DropdownKey | null>(null);
     const [mobileOpen, setMobileOpen] = useState(false);
     const pathname = usePathname();
+    const navRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        const handlePointerDown = (event: PointerEvent) => {
+            if (navRef.current && !navRef.current.contains(event.target as Node)) {
+                setMobileOpen(false);
+                setOpenDropdown(null);
+            }
+        };
+
+        document.addEventListener("pointerdown", handlePointerDown);
+        return () => document.removeEventListener("pointerdown", handlePointerDown);
+    }, []);
 
     // Helper function to check if a path is active
     const isActive = (path: string, section?: DropdownKey) => {
@@ -73,7 +86,7 @@ export const Navbar = () => {
     );
 
     return (
-        <nav>
+        <nav ref={navRef}>
             <div className="nav-content">
                 <Link href="/" className="mr-5 ml-2">
                     <Image
