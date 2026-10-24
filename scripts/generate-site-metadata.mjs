@@ -9,6 +9,18 @@ const runGit = (args, fallback) => {
   }
 };
 
+const runJsonRequest = (url) => {
+  try {
+    return JSON.parse(
+      execFileSync("curl", ["--fail", "--silent", "--show-error", "--location", url], {
+        encoding: "utf8",
+      }),
+    );
+  } catch {
+    return null;
+  }
+};
+
 const formatDate = (value) => {
   if (!value || value === "unknown") {
     return "unknown";
@@ -24,14 +36,27 @@ const formatDate = (value) => {
 
 const sourceCommit = process.env.CODEBUILD_RESOLVED_SOURCE_VERSION || "unknown";
 const sourceDate = process.env.CODEBUILD_START_TIME || "unknown";
-const commit = runGit(
+const localCommit = runGit(
   ["log", "-1", "--format=%H|%cI"],
-  `${sourceCommit}|${sourceDate}`,
+  "",
 ).split("|");
+const sourceCommitData =
+  sourceCommit !== "unknown"
+    ? runJsonRequest(`https://api.github.com/repos/JohnDoll2023/reactwebsite/commits/${sourceCommit}`)
+    : null;
+const commit = localCommit[0]
+  ? localCommit
+  : [
+      sourceCommit,
+      sourceCommitData?.commit?.committer?.date || sourceDate,
+    ];
 const commitMessage = runGit(["log", "-1", "--format=%s"], "");
 const localVersion = runGit(["tag", "--sort=-version:refname"], "")
   .split("\n")
   .find(Boolean);
+const latestRelease = runJsonRequest(
+  "https://api.github.com/repos/JohnDoll2023/reactwebsite/releases/latest",
+);
 const remoteTags = runGit(
   [
     "ls-remote",
@@ -43,7 +68,7 @@ const remoteTags = runGit(
   "",
 );
 const remoteVersion = remoteTags.match(/refs\/tags\/(v\d+\.\d+\.\d+)$/m)?.[1];
-const version = localVersion || remoteVersion || "unreleased";
+const version = latestRelease?.tag_name || localVersion || remoteVersion || "unreleased";
 const pullRequestNumber = commitMessage.match(/Merge pull request #(\d+)/)?.[1];
 const metadata = {
   lastEdited: formatDate(commit[1]),
