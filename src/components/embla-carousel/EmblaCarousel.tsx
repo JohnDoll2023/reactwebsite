@@ -75,12 +75,16 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
   useEffect(() => {
     if (!isActive) {
-      setFlippedSlideIndex(null);
+      const resetTimer = setTimeout(() => {
+        setFlippedSlideIndex(null);
+      }, 0);
       if (resumeTimer.current) {
         clearTimeout(resumeTimer.current);
         resumeTimer.current = null;
       }
       emblaApi?.plugins().autoScroll?.play();
+
+      return () => clearTimeout(resetTimer);
     }
   }, [emblaApi, isActive]);
 

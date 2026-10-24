@@ -57,13 +57,12 @@ const projects = [
 
 export default function ProjectsOverview() {
   const [visibleProjects, setVisibleProjects] = useState<Set<number>>(
-    () => new Set(),
+    () => new Set(projects.map((_, index) => index)),
   );
   const projectRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   useEffect(() => {
     if (!("IntersectionObserver" in window)) {
-      setVisibleProjects(new Set(projects.map((_, index) => index)));
       return;
     }
 

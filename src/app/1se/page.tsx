@@ -3,6 +3,7 @@ import Image from "next/image";
 export const generateMetadata = () => {
     return {
       title: 'John Doll | 1SE',
+      description: 'John Doll’s 1 Second Everyday project and personal video timeline.',
     };
   };
 

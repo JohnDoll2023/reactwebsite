@@ -4,6 +4,7 @@ import ResumeDownload from "./ResumeDownload";
 export const generateMetadata = () => {
     return {
       title: 'John Doll | Resume',
+      description: 'John Doll’s software engineering and DevOps resume, including experience, education, skills, and projects.',
     };
   };
 

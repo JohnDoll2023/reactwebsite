@@ -1,6 +1,7 @@
 export const generateMetadata = () => {
     return {
       title: 'John Doll | Blog',
+      description: 'Writing and technical notes by John Doll about software, technology, projects, and experiences.',
     };
   };
 

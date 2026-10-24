@@ -4,6 +4,7 @@ import { GroupPager } from "../../../components/group-pager/GroupPager";
 export const generateMetadata = () => {
  return {
    title: "John Doll | St. Mark's",
+   description: "John Doll’s sound and technology support experience at St. Mark’s, including live audio and livestreaming.",
  };
 };
 

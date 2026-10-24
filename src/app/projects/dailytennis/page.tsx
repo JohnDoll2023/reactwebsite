@@ -1,6 +1,7 @@
 export const generateMetadata = () => {
     return {
       title: 'John Doll | Daily Tennis App',
+      description: 'The Daily Tennis App, a project for sharing daily tennis activities and memories.',
     };
   };
 

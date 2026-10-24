@@ -3,6 +3,7 @@ import { GroupPager } from "../../../components/group-pager/GroupPager";
 
 export const generateMetadata = () => ({
   title: "John Doll | Amazon (2021)",
+  description: "John Doll’s 2021 Amazon software development internship working on web applications, dashboards, APIs, and cloud systems.",
 });
 
 const professionalStory = [

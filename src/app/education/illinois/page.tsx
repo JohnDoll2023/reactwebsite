@@ -4,6 +4,7 @@ import { GroupPager } from "../../../components/group-pager/GroupPager";
 export const generateMetadata = () => {
     return {
       title: 'John Doll | Illinois',
+      description: 'John Doll’s Master of Computer Science experience at the University of Illinois, including graduate coursework and projects.',
     };
   };
 

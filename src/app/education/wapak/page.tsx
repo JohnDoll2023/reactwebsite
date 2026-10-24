@@ -3,6 +3,7 @@ import { GroupPager } from "../../../components/group-pager/GroupPager";
 export const generateMetadata = () => {
     return {
       title: 'John Doll | Wapak',
+      description: 'John Doll’s Wapakoneta High School experience, technology projects, tennis, and extracurricular activities.',
     };
   };
 

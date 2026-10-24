@@ -32,21 +32,6 @@
     margin: 0 1.5rem;
 }
 
-.embla__slide__number {
-    box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-    border-radius: 1.8rem;
-    font-size: 3rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center; /* Vertically center the text */
-    justify-content: center; /* Horizontally center the text */
-    text-align: center; /* Center-align text for multi-line content */
-    height: var(--slide-height);
-    user-select: none;
-    padding: 1rem; /* Add padding to prevent text from touching edges */
-    word-break: break-word; /* Ensure long words wrap properly */
-}
-
 .embla__slide__card {
     height: var(--slide-height);
     position: relative;

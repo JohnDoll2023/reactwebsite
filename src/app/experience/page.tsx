@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export const generateMetadata = () => ({
   title: "John Doll | Experience",
+  description: "John Doll’s software engineering, DevOps, infrastructure, networking, and technical support experience.",
 });
 
 const experiences = [

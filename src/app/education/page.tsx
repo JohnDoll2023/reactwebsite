@@ -4,6 +4,7 @@ import Link from "next/link";
 export const generateMetadata = () => {
     return {
       title: 'John Doll | Education',
+      description: 'John Doll’s academic background, including graduate study at the University of Illinois and computer science at Miami University.',
     };
   };
 

@@ -5,6 +5,7 @@ import { GroupPager } from "../../../components/group-pager/GroupPager";
 export const generateMetadata = () => {
   return {
     title: "John Doll | Website 2.0",
+    description: "An earlier version of John Doll’s personal website built with web development technologies and AWS.",
   };
 };
 

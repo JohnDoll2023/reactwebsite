@@ -4,6 +4,7 @@ import { GroupPager } from "../../../components/group-pager/GroupPager";
 export const generateMetadata = () => {
  return {
    title: "John Doll | Hospitality Wifi",
+   description: "John Doll’s hospitality WiFi support experience with networking, systems, and technical troubleshooting.",
  };
 };
 
