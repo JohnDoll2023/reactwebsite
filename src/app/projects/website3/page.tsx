@@ -32,7 +32,7 @@ export default function Home() {
 
               <div className="flex justify-center py-2">
                 <Image
-                  src="/projects/website3/aws.png"
+                  src="/projects/website3/aws.webp"
                   alt="AWS CodePipeline deployment for the website"
                   width={2938}
                   height={1294}

@@ -51,7 +51,7 @@ export default function Home() {
             ["/projects/covid/covidmap.gif", "COVID-19 dashboard map"],
             ["/projects/covid/covidgraph.gif", "COVID-19 dashboard graph"],
             ["/projects/covid/covidchart.gif", "COVID-19 dashboard chart"],
-            ["/projects/covid/covid.png", "COVID-19 dashboard"],
+            ["/projects/covid/covid.webp", "COVID-19 dashboard"],
           ].map(([src, alt]) => (
             <div
               key={src}

@@ -11,7 +11,7 @@ const projects = [
     title: "Website 3.0",
     description:
       "My current personal website, built with React, Next.js, Tailwind CSS, and TypeScript.",
-    image: "/projects/website3/website.png",
+    image: "/projects/website3/website.webp",
     alt: "Website 3.0 desktop screenshot",
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     title: "Website 2.0",
     description:
       "My second personal public-facing website, and the latest to be deprecated.",
-    image: "/projects/website2/website.png",
+    image: "/projects/website2/website.webp",
     alt: "Website 2.0 screenshot",
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     title: "Website 1.0",
     description:
       "My first public-facing website, built during my first year of college.",
-    image: "/projects/website1/indexbig.png",
+    image: "/projects/website1/indexbig.webp",
     alt: "Website 1.0 home page screenshot",
   },
   {
@@ -35,7 +35,7 @@ const projects = [
     title: "COVID-19 Dynamic Dashboard",
     description:
       "I was the co-project leader, major developer, and unit tester on this health services web application.",
-    image: "/projects/covid/covid.png",
+    image: "/projects/covid/covid.webp",
     alt: "COVID-19 dashboard screenshot",
   },
   {
@@ -43,14 +43,14 @@ const projects = [
     title: "Checkers",
     description:
       "I developed a fully functional checkers game during my first year at Miami.",
-    image: "/projects/checkers/checkers.png",
+    image: "/projects/checkers/checkers.webp",
     alt: "Checkers game screenshot",
   },
   {
     href: "/projects/dailytennis",
     title: "The Daily Tennis App",
     description: "Release date TBD.",
-    image: "/projects/dailytennis/dailytennis.png",
+    image: "/projects/dailytennis/dailytennis.webp",
     alt: "Daily Tennis App placeholder screenshot",
   },
 ];

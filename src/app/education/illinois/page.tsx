@@ -56,23 +56,30 @@ export default function Home() {
       </div>
       <div className="order-3 grid w-full grid-cols-1 items-center gap-4 md:grid-cols-3">
         <Image
-          src="/education/illinois/background.jpeg"
+          src="/education/illinois/background.webp"
           alt="University of Illinois campus"
           width={2268}
           height={4032}
           className="h-72 w-full rounded-lg object-contain shadow md:h-96"
         />
         <div className="relative h-48 w-full md:h-64">
-          <Image
-            src="/education/illinois/illinois.png"
-            alt="University of Illinois block I logo"
-            fill
-            className="object-contain"
-            priority
-          />
+          <a
+            href="https://illinois.edu/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Visit the University of Illinois website"
+          >
+            <Image
+              src="/education/illinois/illinois.webp"
+              alt="University of Illinois block I logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </a>
         </div>
         <Image
-          src="/education/illinois/statue.jpeg"
+          src="/education/illinois/statue.webp"
           alt="University of Illinois campus statue"
           width={2268}
           height={4032}
