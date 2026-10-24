@@ -93,7 +93,7 @@ export const Navbar = () => {
     );
 
     return (
-        <nav ref={navRef}>
+        <nav ref={navRef} aria-label="Primary navigation">
             <div className="nav-content">
                 <Link href="/" className="mr-5 ml-2">
                     <Image
@@ -104,10 +104,10 @@ export const Navbar = () => {
                         height={50}
                     />
                 </Link>
-                <li className="text-lg" id="name">
+                <div className="text-lg" id="name">
                     <Link href="/" className="mx-5">John Doll</Link>
-                </li>
-                <ul className={`menu ${mobileOpen ? "open" : ""}`}>
+                </div>
+                <ul id="primary-menu" className={`menu ${mobileOpen ? "open" : ""}`}>
                     <li>
                         <Link
                             href="/"
@@ -137,6 +137,8 @@ export const Navbar = () => {
                                 onClick={() => {
                                     setOpenDropdown(openDropdown === key ? null : (key as DropdownKey));
                                 }}
+                                aria-expanded={openDropdown === key}
+                                aria-haspopup="true"
                                 type="button"
                             >
                                 {key}
@@ -183,6 +185,8 @@ export const Navbar = () => {
                     className="hamburger mr-2"
                     onClick={() => setMobileOpen(!mobileOpen)}
                     aria-label="Toggle menu"
+                    aria-expanded={mobileOpen}
+                    aria-controls="primary-menu"
                 >
                     <span />
                     <span />

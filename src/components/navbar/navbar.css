@@ -6,6 +6,26 @@ nav {
     overflow: visible; /* Allow the menu to overflow */
 }
 
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 10000;
+    background: #fcd34d;
+    color: #000;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+}
+
+.skip-link:focus {
+    top: 0.5rem;
+}
+
+:focus-visible {
+    outline: 3px solid #fcd34d;
+    outline-offset: 3px;
+}
+
 .nav-content {
     display: flex;
     align-items: center;
@@ -185,6 +205,17 @@ nav li > .mx-10 {
     .dropdown {
         border: none; /* Light gray border */
         box-shadow: none; /* Subtle shadow */
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            scroll-behavior: auto !important;
+            transition-duration: 0.01ms !important;
+        }
     }
 }
 

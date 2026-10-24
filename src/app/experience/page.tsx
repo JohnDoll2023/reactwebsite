@@ -8,8 +8,17 @@ export const generateMetadata = () => ({
 const experiences = [
   {
     name: "Lutron",
-    role: "Senior Software Engineer, Central DevOps",
-    years: "2023-Present",
+    role: "Senior DevOps Engineer",
+    years: "2024-Present",
+    href: "/experience/lutron",
+    logo: "/experience/lutron/lutron.webp",
+    alt: "Lutron logo",
+    invert: true,
+  },
+  {
+    name: "Lutron",
+    role: "Software Engineer",
+    years: "2023-2024",
     href: "/experience/lutron",
     logo: "/experience/lutron/lutron.webp",
     alt: "Lutron logo",
@@ -75,13 +84,29 @@ export default function ExperiencePage() {
           </p>
         </header>
 
+        <section aria-labelledby="career-timeline-heading" className="space-y-5">
+          <h2 id="career-timeline-heading" className="text-center text-3xl md:text-5xl">Career timeline</h2>
+          <ol className="relative ml-3 border-l-2 border-[#255230] pl-6 md:ml-8 md:pl-8">
+            {experiences.map((experience) => (
+              <li key={`timeline-${experience.name}-${experience.years}`} className="relative pb-7 last:pb-0">
+                <span className="absolute -left-[2.05rem] top-1 h-4 w-4 rounded-full border-4 border-[#255230] bg-[var(--background)] md:-left-[2.55rem]" aria-hidden="true" />
+                <Link href={experience.href} className="rounded-md focus:outline-none focus:ring-2 focus:ring-[#fcd34d]">
+                  <p className="font-bold text-[#255230] dark:text-green-300">{experience.years}</p>
+                  <h3 className="text-xl not-italic">{experience.name}</h3>
+                  <p>{experience.role}</p>
+                </Link>
+              </li>
+            ))}
+          </ol>
+        </section>
+
         <section
           aria-label="Professional and personal experiences"
           className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"
         >
           {experiences.map((experience) => (
             <Link
-              key={experience.href}
+              key={`${experience.name}-${experience.years}`}
               href={experience.href}
               className="group flex min-h-72 flex-col items-center justify-between rounded-xl border border-black/10 p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-white/20"
             >
