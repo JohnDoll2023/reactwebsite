@@ -1,4 +1,5 @@
 import siteMetadata from "../../generated/site-metadata";
+import { LiveReleaseMetadata } from "./LiveReleaseMetadata";
 
 export const Footer = () => {
     const lastEdited = siteMetadata.lastEdited.slice(0, 10);
@@ -78,28 +79,14 @@ export const Footer = () => {
 
             {/* Right-Aligned Content */}
             <div className="footer-right">
-                {lastEdited && (
-                    <p className="text-sm">
-                        {lastCommitUrl ? (
-                            <a href={lastCommitUrl} target="_blank" rel="noopener noreferrer">
-                            Last Edited On: <span className="underline">{lastEdited}</span>
-                            </a>
-                        ) : (
-                            <>Last Edited On: <span className="underline">{lastEdited}</span></>
-                        )}
-                    </p>
-                )}
-                {version && (
-                    <p className="text-sm">
-                        {versionUrl ? (
-                            <a href={versionUrl} target="_blank" rel="noopener noreferrer">
-                            Version: <span className="underline">{version}</span>
-                            </a>
-                        ) : (
-                            <>Version: <span className="underline">{version}</span></>
-                        )}
-                    </p>
-                )}
+                <LiveReleaseMetadata
+                    fallback={{
+                        lastEdited,
+                        lastCommitUrl,
+                        version,
+                        versionUrl,
+                    }}
+                />
             </div>
         </footer>
     );
