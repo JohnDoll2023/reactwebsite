@@ -9,6 +9,19 @@ const runGit = (args, fallback) => {
   }
 };
 
+const formatDate = (value) => {
+  if (!value || value === "unknown") {
+    return "unknown";
+  }
+
+  const numericValue = Number(value);
+  const date = Number.isNaN(numericValue)
+    ? new Date(value)
+    : new Date(numericValue < 1e12 ? numericValue * 1000 : numericValue);
+
+  return Number.isNaN(date.getTime()) ? "unknown" : date.toISOString().slice(0, 10);
+};
+
 const sourceCommit = process.env.CODEBUILD_RESOLVED_SOURCE_VERSION || "unknown";
 const sourceDate = process.env.CODEBUILD_START_TIME || "unknown";
 const commit = runGit(
@@ -33,7 +46,7 @@ const remoteVersion = remoteTags.match(/refs\/tags\/(v\d+\.\d+\.\d+)$/m)?.[1];
 const version = localVersion || remoteVersion || "unreleased";
 const pullRequestNumber = commitMessage.match(/Merge pull request #(\d+)/)?.[1];
 const metadata = {
-  lastEdited: commit[1],
+  lastEdited: formatDate(commit[1]),
   lastCommitUrl:
     pullRequestNumber
       ? `https://github.com/JohnDoll2023/reactwebsite/pull/${pullRequestNumber}`
