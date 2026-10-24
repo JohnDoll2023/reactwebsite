@@ -24,7 +24,7 @@ export default function Home() {
               className="transition-opacity hover:opacity-80"
             >
               <Image
-                src="/education/miami.png"
+                src="/education/miami/miami.png"
                 alt="Miami University logo"
                 width={800}
                 height={400}
@@ -34,6 +34,23 @@ export default function Home() {
             </a>
           </div>
         </header>
+
+        <section className="mx-auto grid w-full max-w-3xl grid-cols-1 gap-4 md:grid-cols-2">
+          <Image
+            src="/education/miami/jimkiper.JPG"
+            alt="Miami University campus"
+            width={4000}
+            height={6000}
+            className="h-64 w-full rounded-lg object-cover shadow md:h-80"
+          />
+          <Image
+            src="/education/miami/seal.JPG"
+            alt="Miami University seal"
+            width={4000}
+            height={6000}
+            className="h-64 w-full rounded-lg object-cover shadow md:h-80"
+          />
+        </section>
 
         <section className="space-y-5 text-base leading-8 md:text-lg">
           <p>

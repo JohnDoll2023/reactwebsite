@@ -13,7 +13,7 @@ export default function Home() {
         <div className="relative min-h-64 w-full">
           <a href="https://wapak.org" target="_blank" rel="noreferrer" title="Visit Wapakoneta High School website" className="transition-opacity hover:opacity-80">
             <Image
-              src="/education/wapakW.png"
+              src="/education/wapak/wapakW.png"
               alt="Wapakoneta High School logo"
               fill
               className="object-contain"
@@ -38,6 +38,22 @@ export default function Home() {
           Nonetheless, I consider the rigor of my everyday life in high school to be the main factor in my success in college.
         </p>
       </div>
+      <section className="grid w-full max-w-3xl grid-cols-1 gap-4 md:grid-cols-2">
+        <Image
+          src="/education/wapak/max.jpg"
+          alt="Wapakoneta High School memory"
+          width={3247}
+          height={4449}
+          className="h-72 w-full rounded-lg object-contain shadow md:h-96"
+        />
+        <Image
+          src="/education/wapak/tennis.jpg"
+          alt="Wapakoneta High School tennis memory"
+          width={2798}
+          height={3498}
+          className="h-72 w-full rounded-lg object-contain shadow md:h-96"
+        />
+      </section>
     </div>
   );
 }

@@ -54,16 +54,22 @@ export const Navbar = () => {
 
     // Helper function to check if a path is active
     const isActive = (path: string, section?: DropdownKey) => {
-        if (path === "/" && pathname === "/") return true;
-        if (path === "/" && pathname !== "/") return false;
-        
-        // For dropdown sections, check if current path starts with the section name
+        const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
+        const normalizedPath = path.replace(/\/+$/, "") || "/";
+
+        // For dropdown sections, check current path starts with section name.
         if (section) {
-            return pathname.startsWith(`/${section}`);
+            return normalizedPathname.startsWith(`/${section}`);
         }
+
+        if (normalizedPath === "/" && normalizedPathname === "/") return true;
+        if (normalizedPath === "/" && normalizedPathname !== "/") return false;
         
-        return pathname === path;
+        return normalizedPathname === normalizedPath;
     };
+
+    const activeLinkStyle = (path: string) =>
+        isActive(path) ? { color: "#fcd34d", fontWeight: 700 } : undefined;
 
     // Helper to render dropdown
     const renderDropdown = (key: DropdownKey) => (
@@ -72,7 +78,8 @@ export const Navbar = () => {
                 <li key={item.href}>
                     <Link
                         href={item.href}
-                        className="dropdown-link block w-full"
+                        className={`dropdown-link block w-full ${isActive(item.href) ? "active" : ""}`}
+                        aria-current={isActive(item.href) ? "page" : undefined}
                         onClick={() => {
                             setOpenDropdown(null); // Close dropdown
                             setMobileOpen(false); // Close mobile menu
@@ -91,7 +98,7 @@ export const Navbar = () => {
                 <Link href="/" className="mr-5 ml-2">
                     <Image
                         className="rounded-md navbar-image"
-                        src="/nav/headshot.JPG"
+                        src="/nav/headshot.png"
                         alt="John Doll"
                         width={50}
                         height={50}
@@ -104,7 +111,7 @@ export const Navbar = () => {
                     <li>
                         <Link
                             href="/"
-                            className={`mx-5 ${isActive("/") ? "text-yellow-300 font-bold" : "hover:text-yellow-200"}`}
+                            className={`nav-link mx-5 ${isActive("/") ? "active" : ""}`}
                             onClick={() => setMobileOpen(false)}
                         >
                             Home
@@ -118,7 +125,7 @@ export const Navbar = () => {
                             onMouseLeave={() => setOpenDropdown(null)}
                         >
                             <button
-                                className={`mx-5 capitalize ${isActive("", key as DropdownKey) ? "text-yellow-300 font-bold" : "hover:text-yellow-200"}`}
+                                className={`nav-link mx-5 capitalize ${isActive("", key as DropdownKey) ? "active" : ""}`}
                                 style={{
                                     display: "flex",
                                     alignItems: "center",
@@ -141,7 +148,9 @@ export const Navbar = () => {
                     <li>
                         <Link
                             href="/resume"
-                            className={`mx-5 ${isActive("/resume") ? "text-yellow-300 font-bold" : "hover:text-yellow-200"}`}
+                            className={`nav-link mx-5 ${isActive("/resume") ? "active" : ""}`}
+                            aria-current={isActive("/resume") ? "page" : undefined}
+                            style={activeLinkStyle("/resume")}
                             onClick={() => setMobileOpen(false)}
                         >
                             Resume
@@ -150,7 +159,9 @@ export const Navbar = () => {
                     <li>
                         <Link
                             href="/1se"
-                            className={`mx-5 ${isActive("/1se") ? "text-yellow-300 font-bold" : "hover:text-yellow-200"}`}
+                            className={`nav-link mx-5 ${isActive("/1se") ? "active" : ""}`}
+                            aria-current={isActive("/1se") ? "page" : undefined}
+                            style={activeLinkStyle("/1se")}
                             onClick={() => setMobileOpen(false)}
                         >
                             1SE
@@ -159,7 +170,9 @@ export const Navbar = () => {
                     <li>
                         <Link
                             href="/contact"
-                            className={`mx-5 ${isActive("/contact") ? "text-yellow-300 font-bold" : "hover:text-yellow-200"}`}
+                            className={`nav-link mx-5 ${isActive("/contact") ? "active" : ""}`}
+                            aria-current={isActive("/contact") ? "page" : undefined}
+                            style={activeLinkStyle("/contact")}
                             onClick={() => setMobileOpen(false)}
                         >
                             Contact
