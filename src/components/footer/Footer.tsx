@@ -78,18 +78,26 @@ export const Footer = () => {
 
             {/* Right-Aligned Content */}
             <div className="footer-right">
-                {lastEdited && lastCommitUrl && (
+                {lastEdited && (
                     <p className="text-sm">
-                        <a href={lastCommitUrl} target="_blank" rel="noopener noreferrer">
+                        {lastCommitUrl ? (
+                            <a href={lastCommitUrl} target="_blank" rel="noopener noreferrer">
                             Last Edited On: <span className="underline">{lastEdited}</span>
-                        </a>
+                            </a>
+                        ) : (
+                            <>Last Edited On: <span className="underline">{lastEdited}</span></>
+                        )}
                     </p>
                 )}
-                {version && versionUrl && (
+                {version && (
                     <p className="text-sm">
-                        <a href={versionUrl} target="_blank" rel="noopener noreferrer">
+                        {versionUrl ? (
+                            <a href={versionUrl} target="_blank" rel="noopener noreferrer">
                             Version: <span className="underline">{version}</span>
-                        </a>
+                            </a>
+                        ) : (
+                            <>Version: <span className="underline">{version}</span></>
+                        )}
                     </p>
                 )}
             </div>
