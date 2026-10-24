@@ -68,6 +68,7 @@ function highlight(text: string, query: string) {
 export function SiteSearch({ onOpenChange }: { onOpenChange?: (open: boolean) => void }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const results = useMemo(() => getResults(query), [query]);
 
@@ -76,12 +77,22 @@ export function SiteSearch({ onOpenChange }: { onOpenChange?: (open: boolean) =>
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") setOpen(false);
     };
+    const handlePointerDown = (event: PointerEvent) => {
+      if (open && searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setOpen(false);
+        onOpenChange?.(false);
+      }
+    };
     document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [open]);
+    document.addEventListener("pointerdown", handlePointerDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("pointerdown", handlePointerDown);
+    };
+  }, [onOpenChange, open]);
 
   return (
-    <div className={`site-search ${open ? "is-open" : ""}`}>
+    <div ref={searchRef} className={`site-search ${open ? "is-open" : ""}`}>
       <button
         type="button"
         className="site-search-toggle"
