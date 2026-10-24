@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { SiteSearch } from "./SiteSearch";
 
 const dropdowns = {
     projects: [
@@ -181,6 +182,7 @@ export const Navbar = () => {
                         </Link>
                     </li>
                 </ul>
+                <SiteSearch />
                 <button
                     className="hamburger mr-2"
                     onClick={() => setMobileOpen(!mobileOpen)}
