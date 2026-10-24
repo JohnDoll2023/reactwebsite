@@ -22,8 +22,8 @@ nav {
 }
 
 .group-pager {
-    position: fixed;
-    top: 4.5rem;
+    position: absolute;
+    top: 0;
     right: 0.75rem;
     left: 0.75rem;
     z-index: 900;
@@ -60,6 +60,7 @@ nav {
 }
 
 #main-content:has(.group-pager) {
+    position: relative;
     padding-top: 3rem;
 }
 
