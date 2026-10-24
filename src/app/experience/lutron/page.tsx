@@ -32,15 +32,15 @@ export default function Home() {
           <Image
             src="/experience/lutron/5k.webp"
             alt="Lutron 5K"
-            width={4032}
-            height={3024}
+            width={3024}
+            height={4032}
             className="aspect-[4/3] h-full w-full rounded-lg object-cover shadow"
           />
           <Image
             src="/experience/lutron/starwars.webp"
             alt="Lutron Star Wars event"
-            width={4032}
-            height={3024}
+            width={3024}
+            height={4032}
             className="aspect-[4/3] h-full w-full rounded-lg object-cover shadow"
           />
           <Image
