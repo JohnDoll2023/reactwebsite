@@ -54,29 +54,43 @@ export default function Home() {
       <div className="order-2 md:order-1">
         <h2>University of Illinois (Fall &apos;24 - August &apos;26)</h2>
       </div>
-      <div className="flex flex-1 flex-col md:flex-row items-center order-3 md:order-2">
-        <p className="flex-1 text-xl text-left order-2 md:order-1">
+      <div className="order-3 grid w-full grid-cols-1 items-center gap-4 md:grid-cols-3">
+        <Image
+          src="/education/illinois/background.jpeg"
+          alt="University of Illinois campus"
+          width={2268}
+          height={4032}
+          className="h-72 w-full rounded-lg object-contain shadow md:h-96"
+        />
+        <div className="relative h-48 w-full md:h-64">
+          <Image
+            src="/education/illinois/illinois.png"
+            alt="University of Illinois block I logo"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
+        <Image
+          src="/education/illinois/statue.jpeg"
+          alt="University of Illinois campus statue"
+          width={2268}
+          height={4032}
+          className="h-72 w-full rounded-lg object-contain shadow md:h-96"
+        />
+      </div>
+      <div className="order-4 grid flex-1 grid-cols-1 items-center gap-8 md:grid-cols-2">
+        <p className="text-left text-xl">
           When I began my search for a graduate school to attend to pursue my Master&apos;s in Computer Science, one of criteria I used
           was to find a program that was highly touted and well-regarded. Enter, the University of Illinois, a prestigious institution 
           known for its strong engineering and computer science programs. 
         </p>
-        <div className="relative w-full max-w-2xl aspect-video order-1 md:order-2 md:my-0 my-4">
-          <a href="https://illinois.edu" target="_blank" rel="noreferrer" title="Visit University of Illinois website" className="transition-opacity hover:opacity-80">
-            <Image
-              src="/education/illinois.png"
-              alt="University of Illinois block I logo"
-              fill
-              className="object-contain"
-              priority
-            />
-          </a>
-        </div>
-        <p className="flex-1 text-xl text-left order-3 md:order-3 md:mt-0 mt-7">
+        <p className="text-left text-xl">
           Funny enough, the first time I visited campus (Urbana-Champaign) was as a recruiter for Lutron while I was already in the midst of my first semester.
           I went to the career fair and was recruiting my classmates shortly after becoming a member of the student body myself, albeit remotely.
         </p>
       </div>
-      <div className="flex flex-col items-start w-full order-4 md:order-3 md:my-0 mt-10">
+      <div className="flex flex-col items-start w-full order-5 md:my-0 mt-10">
         <div className="flex items-start mb-4">
           <h3>Courses</h3>
         </div>
