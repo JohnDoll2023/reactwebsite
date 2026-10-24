@@ -14,15 +14,36 @@ export default function ResumeDownload() {
         throw new Error(`Resume download failed with status ${response.status}`);
       }
 
-      const blobUrl = URL.createObjectURL(await response.blob());
+      const blob = await response.blob();
+      const file = new File([blob], "John-Doll-Resume.pdf", {
+        type: "application/pdf",
+      });
+
+      if (
+        navigator.share &&
+        navigator.canShare?.({ files: [file] })
+      ) {
+        await navigator.share({
+          files: [file],
+          title: "John Doll Resume",
+        });
+        return;
+      }
+
+      const blobUrl = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = blobUrl;
       link.download = "John-Doll-Resume.pdf";
       document.body.appendChild(link);
       link.click();
       link.remove();
-      URL.revokeObjectURL(blobUrl);
-    } catch {
+      window.setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+    } catch (error) {
+      if (error instanceof DOMException && error.name === "AbortError") {
+        return;
+      }
+
+      console.error("Resume download failed", error);
       setDownloadError(true);
     }
   };
