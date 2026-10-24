@@ -21,6 +21,48 @@ nav {
     top: 0.5rem;
 }
 
+.group-pager {
+    position: fixed;
+    top: 4.5rem;
+    right: 0.75rem;
+    left: 0.75rem;
+    z-index: 900;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    color: var(--foreground);
+    pointer-events: none;
+}
+
+.group-pager-link {
+    display: inline-flex;
+    min-height: 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    color: inherit;
+    background: color-mix(in srgb, var(--background) 85%, transparent);
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1;
+    pointer-events: auto;
+    text-decoration: none;
+}
+
+.group-pager-link:hover {
+    background: rgb(37 82 48 / 12%);
+}
+
+.group-pager-next {
+    margin-left: auto;
+}
+
+#main-content:has(.group-pager) {
+    padding-top: 3rem;
+}
+
 :focus-visible {
     outline: 3px solid #fcd34d;
     outline-offset: 3px;
@@ -213,6 +255,10 @@ nav li > .mx-10 {
 }
 
 @media (max-width: 1000px) {
+    .group-pager {
+        top: 8.5rem;
+    }
+
     .nav-content ul {
         display: none;
     }

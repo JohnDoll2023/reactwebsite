@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { GroupPager } from "../../../components/group-pager/GroupPager";
 
 export const generateMetadata = () => {
     return {
@@ -51,6 +52,7 @@ const transferredCourses = [
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col items-center p-8">
+      <GroupPager group="education" current="/education/illinois" />
       <div className="order-2 md:order-1">
         <h2>University of Illinois (Fall &apos;24 - August &apos;26)</h2>
       </div>

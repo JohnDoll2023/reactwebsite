@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { GroupPager } from "../../../components/group-pager/GroupPager";
 import Link from "next/link";
 
 export const generateMetadata = () => ({
@@ -68,6 +69,7 @@ function Story({ paragraphs }: { paragraphs: React.ReactNode[] }) {
 export default function Amazon2022Page() {
   return (
     <div className="flex flex-1 justify-center p-6 md:p-10">
+      <GroupPager group="experience" current="/experience/amazon2022" />
       <article className="w-full max-w-6xl space-y-8">
         <header className="space-y-3 text-center">
           <h1 className="text-3xl font-bold md:text-4xl">Amazon (2022)</h1>

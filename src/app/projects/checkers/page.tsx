@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { GroupPager } from "../../../components/group-pager/GroupPager";
 
 export const generateMetadata = () => {
   return {
@@ -9,6 +10,7 @@ export const generateMetadata = () => {
 export default function Home() {
   return (
     <main className="flex-1 bg-[#171717] text-white">
+      <GroupPager group="projects" current="/projects/checkers" />
       <section className="mx-auto flex w-full max-w-[90rem] flex-col gap-8 px-4 py-8 md:px-8 lg:px-10">
         <div className="rounded-[2rem] border border-white/10 bg-slate-950/85 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur md:p-10">
           <h1 className="text-4xl font-black tracking-tight text-white md:text-6xl">
