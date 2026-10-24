@@ -7,12 +7,11 @@
 I built the first version of my website in late 2020 during fall of my sophomore year of college, built solely on HTML, CSS,
 JavaScript, and Bootstrap. 
 
-I built the second version of my website in the summer of 2021 during my internship, also built with
-the same tools but with more experience. I've maintained it (enough) since then, adding new projects and experiences that I've
+I built the second version of my website in the summer of 2021 during my internship, built with many of the same tools except I switched to AWS. I've maintained it (enough) since then, adding new projects and experiences that I've
 been through, but it's time for another revamp and learning opportunity. 
 
 So, January 10, 2025 offically marks the birth of the third version of my website. This time, I'm building it with Next.js, React, and Tailwind CSS.
 
 I'm also using this as an opportunity to learn more about GitHub Actions and the robustness of GitHub in general. In my current role at Lutron Electronics, I am a DevOps engineer, but we don't use Github, so I'm excited to learn more about it.
 
-Unfortunately, I started this effort at the beginning of my endeavor to obtain a Master's degree. This has led to me not being able to put in regular time working on this website. Regardless, I am excited to work on the website and make improvements whenever I get the chance.
+Unfortunately, I started this effort at the beginning of my endeavor to obtain a Master's degree. This led to me to a roughly 20 month gap in major development on the website. During the week of October 11, 2026, I made this website public. I am excited to continue work on the website and make improvements whenever I get the chance.
