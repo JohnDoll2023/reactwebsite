@@ -1,54 +1,10 @@
-"use client";
-
-import { useEffect, useState } from "react";
+import siteMetadata from "../../generated/site-metadata";
 
 export const Footer = () => {
-    const [lastEdited, setLastEdited] = useState<string | null>(null);
-    const [lastCommitUrl, setLastCommitUrl] = useState<string | null>(null);
-    const [version, setVersion] = useState<string | null>(null);
-    const [versionUrl, setVersionUrl] = useState<string | null>(null);
-
-    useEffect(() => {
-        const fetchGitHubData = async () => {
-            try {
-                const username = "JohnDoll2023";
-                const repo = "reactwebsite";
-
-                // Fetch the latest commit
-                const commitsResponse = await fetch(
-                    `https://api.github.com/repos/${username}/${repo}/commits`
-                );
-                const commitsData = await commitsResponse.json();
-                if (commitsData.length > 0) {
-                    const lastCommitDate = new Date(commitsData[0].commit.author.date);
-                    const currentDate = new Date();
-                    const diffInDays = (currentDate.getTime() - lastCommitDate.getTime()) / (1000 * 60 * 60 * 24);
-
-                    if (diffInDays <= 45) {
-                        setLastEdited(lastCommitDate.toLocaleDateString());
-                        setLastCommitUrl(commitsData[0].html_url); // URL to the latest commit
-                    } else {
-                        setLastEdited(null);
-                        setLastCommitUrl(null);
-                    }
-                }
-
-                // Fetch the latest release
-                const releasesResponse = await fetch(
-                    `https://api.github.com/repos/${username}/${repo}/releases/latest`
-                );
-                const releasesData = await releasesResponse.json();
-                if (releasesData.tag_name) {
-                    setVersion(releasesData.tag_name);
-                    setVersionUrl(releasesData.html_url); // URL to the latest release
-                }
-            } catch (error) {
-                console.error("Error fetching GitHub data:", error);
-            }
-        };
-
-        fetchGitHubData();
-    }, []);
+    const lastEdited = siteMetadata.lastEdited.slice(0, 10);
+    const lastCommitUrl = siteMetadata.lastCommitUrl;
+    const version = siteMetadata.version;
+    const versionUrl = siteMetadata.versionUrl;
 
     return (
         <footer className="footer-container">

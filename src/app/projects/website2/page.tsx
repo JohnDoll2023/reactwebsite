@@ -14,7 +14,7 @@ export default function Home() {
         <div className="grid gap-8 rounded-[2rem] border border-white/10 bg-slate-950/85 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] md:items-center md:p-10">
           <Image
             className="h-auto w-full rounded-2xl object-cover shadow-lg"
-            src="/projects/website2/website.png"
+            src="/projects/website2/website.webp"
             alt="Picture of this website"
             width={500}
             height={333}
@@ -59,7 +59,7 @@ export default function Home() {
         <section className="grid gap-6 rounded-[1.5rem] border border-white/10 bg-slate-950/85 p-6 shadow-sm md:grid-cols-2 md:items-center md:p-8">
           <Image
             className="h-auto w-full rounded-xl object-contain"
-            src="/projects/website2/code.png"
+            src="/projects/website2/code.webp"
             alt="Picture of code"
             width={800}
             height={520}
@@ -113,7 +113,7 @@ export default function Home() {
           </p>
           <Image
             className="order-1 h-auto w-full rounded-xl object-contain md:order-2"
-            src="/projects/website2/aws.png"
+            src="/projects/website2/aws.webp"
             alt="Picture of AWS Console"
             width={1759}
             height={1073}
@@ -123,7 +123,7 @@ export default function Home() {
         <section className="grid gap-6 rounded-[1.5rem] border border-white/10 bg-slate-950/85 p-6 shadow-sm md:grid-cols-2 md:items-center md:p-8">
           <Image
             className="h-auto w-full rounded-xl object-contain"
-            src="/projects/website2/history.png"
+            src="/projects/website2/history.webp"
             alt="Picture of this webpage"
             width={2204}
             height={1700}

@@ -23,7 +23,7 @@ export default function Home() {
            className="inline-flex justify-center transition-opacity hover:opacity-80"
          >
            <Image
-             src="/experience/hw/hw.png"
+             src="/experience/hw/hw.webp"
              alt="Hospitality Wifi logo"
              width={700}
              height={220}
@@ -35,14 +35,14 @@ export default function Home() {
 
        <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
          <Image
-           src="/experience/hw/meraki.jpeg"
+           src="/experience/hw/meraki.webp"
            alt="Cisco Meraki dashboard screenshot"
            width={1280}
            height={720}
            className="h-full w-full rounded-lg object-cover shadow"
          />
          <Image
-           src="/experience/hw/meraki2.png"
+           src="/experience/hw/meraki2.webp"
            alt="Additional Cisco Meraki dashboard screenshot"
            width={1280}
            height={720}

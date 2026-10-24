@@ -13,7 +13,7 @@ export default function Home() {
         <div className="relative min-h-64 w-full">
           <a href="https://wapak.org" target="_blank" rel="noreferrer" title="Visit Wapakoneta High School website" className="transition-opacity hover:opacity-80">
             <Image
-              src="/education/wapak/wapakW.png"
+              src="/education/wapak/wapakW.webp"
               alt="Wapakoneta High School logo"
               fill
               className="object-contain"
@@ -40,14 +40,14 @@ export default function Home() {
       </div>
       <section className="grid w-full max-w-3xl grid-cols-1 gap-4 md:grid-cols-2">
         <Image
-          src="/education/wapak/max.jpg"
+          src="/education/wapak/max.webp"
           alt="Wapakoneta High School memory"
           width={3247}
           height={4449}
           className="h-72 w-full rounded-lg object-contain shadow md:h-96"
         />
         <Image
-          src="/education/wapak/tennis.jpg"
+          src="/education/wapak/tennis.webp"
           alt="Wapakoneta High School tennis memory"
           width={2798}
           height={3498}

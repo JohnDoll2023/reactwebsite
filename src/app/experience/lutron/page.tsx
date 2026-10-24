@@ -17,7 +17,7 @@ export default function Home() {
           <div className="inline-flex justify-center">
             <a href="https://lutron.com" target="_blank" rel="noreferrer" title="Visit Lutron website" className="transition-opacity hover:opacity-80">
               <Image
-                src="/experience/lutron/lutron.png"
+                src="/experience/lutron/lutron.webp"
                 alt="Lutron logo"
                 width={2000}
                 height={529}
@@ -30,21 +30,21 @@ export default function Home() {
 
         <section className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <Image
-            src="/experience/lutron/5k.jpeg"
+            src="/experience/lutron/5k.webp"
             alt="Lutron 5K"
             width={4032}
             height={3024}
             className="aspect-[4/3] h-full w-full rounded-lg object-cover shadow"
           />
           <Image
-            src="/experience/lutron/starwars.jpeg"
+            src="/experience/lutron/starwars.webp"
             alt="Lutron Star Wars event"
             width={4032}
             height={3024}
             className="aspect-[4/3] h-full w-full rounded-lg object-cover shadow"
           />
           <Image
-            src="/experience/lutron/promotion.jpeg"
+            src="/experience/lutron/promotion.webp"
             alt="Lutron promotion"
             width={3213}
             height={5712}

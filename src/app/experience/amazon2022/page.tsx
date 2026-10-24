@@ -80,7 +80,7 @@ export default function Amazon2022Page() {
             className="inline-flex justify-center transition-opacity hover:opacity-80"
           >
             <Image
-              src="/experience/amazon/amazon.png"
+              src="/experience/amazon/amazon.webp"
               alt="Amazon logo"
               width={2000}
               height={600}
@@ -103,7 +103,7 @@ export default function Amazon2022Page() {
           <article className="flex flex-col">
             <h2 className="mb-6 text-center">Professional</h2>
             <Image
-              src="/experience/amazon/amazon-shoreline.jpeg"
+              src="/experience/amazon/amazon-shoreline.webp"
               alt="Amazon team picture"
               width={4032}
               height={2377}
@@ -114,7 +114,7 @@ export default function Amazon2022Page() {
           <article className="flex flex-col">
             <h2 className="mb-6 text-center">Personal</h2>
             <Image
-              src="/experience/amazon/amazon-volleyball.jpeg"
+              src="/experience/amazon/amazon-volleyball.webp"
               alt="Amazon intern volleyball activity"
               width={4032}
               height={2268}

@@ -33,7 +33,7 @@ export default function Home() {
 
         <div className="grid gap-5 xl:grid-cols-3">
           <Image
-            src="/projects/checkers/checkerscode.png"
+            src="/projects/checkers/checkerscode.webp"
             alt="Picture of checkers code"
             width={1200}
             height={900}
@@ -48,7 +48,7 @@ export default function Home() {
             Your browser does not support HTML video.
           </video>
           <Image
-            src="/projects/checkers/checkers.png"
+            src="/projects/checkers/checkers.webp"
             alt="Checkers game board"
             width={1200}
             height={900}
