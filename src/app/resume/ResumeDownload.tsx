@@ -53,7 +53,7 @@ export default function ResumeDownload() {
       <button
         type="button"
         onClick={downloadResume}
-        className="rounded-lg bg-[#255230] px-5 py-3 font-bold text-white underline underline-offset-4 md:mb-4"
+        className="rounded-lg bg-[#255230] px-5 py-3 font-bold text-white underline underline-offset-4 md:hidden"
       >
         Download resume
       </button>
