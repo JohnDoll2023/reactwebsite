@@ -182,7 +182,7 @@ export const Navbar = () => {
                         </Link>
                     </li>
                 </ul>
-                <SiteSearch />
+                <SiteSearch onOpenChange={() => setMobileOpen(false)} />
                 <button
                     className="hamburger mr-2"
                     onClick={() => setMobileOpen(!mobileOpen)}
