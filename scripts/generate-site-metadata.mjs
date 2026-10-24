@@ -11,7 +11,9 @@ const runGit = (args, fallback) => {
 
 const commit = runGit(["log", "-1", "--format=%H|%cI"], "unknown|unknown").split("|");
 const commitMessage = runGit(["log", "-1", "--format=%s"], "");
-const version = runGit(["describe", "--tags", "--abbrev=0"], "unreleased");
+const version = runGit(["tag", "--sort=-version:refname"], "")
+  .split("\n")
+  .find(Boolean) || "unreleased";
 const pullRequestNumber = commitMessage.match(/Merge pull request #(\d+)/)?.[1];
 const metadata = {
   lastEdited: commit[1],
