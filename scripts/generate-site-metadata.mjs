@@ -9,11 +9,28 @@ const runGit = (args, fallback) => {
   }
 };
 
-const commit = runGit(["log", "-1", "--format=%H|%cI"], "unknown|unknown").split("|");
+const sourceCommit = process.env.CODEBUILD_RESOLVED_SOURCE_VERSION || "unknown";
+const sourceDate = process.env.CODEBUILD_START_TIME || "unknown";
+const commit = runGit(
+  ["log", "-1", "--format=%H|%cI"],
+  `${sourceCommit}|${sourceDate}`,
+).split("|");
 const commitMessage = runGit(["log", "-1", "--format=%s"], "");
-const version = runGit(["tag", "--sort=-version:refname"], "")
+const localVersion = runGit(["tag", "--sort=-version:refname"], "")
   .split("\n")
-  .find(Boolean) || "unreleased";
+  .find(Boolean);
+const remoteTags = runGit(
+  [
+    "ls-remote",
+    "--tags",
+    "--refs",
+    "--sort=-v:refname",
+    "https://github.com/JohnDoll2023/reactwebsite.git",
+  ],
+  "",
+);
+const remoteVersion = remoteTags.match(/refs\/tags\/(v\d+\.\d+\.\d+)$/m)?.[1];
+const version = localVersion || remoteVersion || "unreleased";
 const pullRequestNumber = commitMessage.match(/Merge pull request #(\d+)/)?.[1];
 const metadata = {
   lastEdited: commit[1],
