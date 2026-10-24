@@ -33,3 +33,45 @@ writeFileSync(
   "src/generated/site-metadata.ts",
   `const siteMetadata = ${JSON.stringify(metadata)} as const;\n\nexport default siteMetadata;\n`,
 );
+
+const routes = [
+  "",
+  "/1se",
+  "/blog",
+  "/contact",
+  "/dj",
+  "/education",
+  "/education/illinois",
+  "/education/miami",
+  "/education/wapak",
+  "/experience",
+  "/experience/amazon2021",
+  "/experience/amazon2022",
+  "/experience/hw",
+  "/experience/lutron",
+  "/experience/marathon",
+  "/experience/stmarks",
+  "/projects",
+  "/projects/checkers",
+  "/projects/covid",
+  "/projects/dailytennis",
+  "/projects/website1",
+  "/projects/website2",
+  "/projects/website3",
+  "/resume",
+];
+
+writeFileSync(
+  "public/sitemap.xml",
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes
+    .map(
+      (route) =>
+        `  <url><loc>https://johndoll.com${route}/</loc><changefreq>${route === "" ? "monthly" : "yearly"}</changefreq><priority>${route === "" ? "1.0" : "0.7"}</priority></url>`,
+    )
+    .join("\n")}\n</urlset>\n`,
+);
+
+writeFileSync(
+  "public/robots.txt",
+  "User-agent: *\nAllow: /\nDisallow: /_next/\nSitemap: https://johndoll.com/sitemap.xml\nHost: https://johndoll.com\n",
+);
