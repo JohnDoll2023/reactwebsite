@@ -41,9 +41,8 @@ export default function Home() {
           />
           <video
             controls
-            autoPlay
             muted
-            className="h-full w-full rounded-2xl border border-white/10 bg-slate-950/85 object-cover shadow-sm"
+            className="aspect-video h-auto w-full rounded-2xl border border-white/10 bg-slate-950/85 object-cover shadow-sm xl:h-full xl:aspect-auto"
           >
             <source src="/projects/checkers/checkers.mov" type="video/mp4" />
             Your browser does not support HTML video.
