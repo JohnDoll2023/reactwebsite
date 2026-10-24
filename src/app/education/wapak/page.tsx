@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { GroupPager } from "../../../components/group-pager/GroupPager";
 export const generateMetadata = () => {
     return {
       title: 'John Doll | Wapak',
@@ -8,6 +9,7 @@ export const generateMetadata = () => {
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col items-center p-8">
+      <GroupPager group="education" current="/education/wapak" />
       <h2 className="text-center">{"Wapak High School (Fall '15 - Spring '19)"}</h2>
       <div className="grid w-full max-w-6xl flex-1 grid-cols-1 gap-8 md:grid-cols-2 md:grid-rows-2">
         <div className="relative min-h-64 w-full">

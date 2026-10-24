@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { GroupPager } from "../../../components/group-pager/GroupPager";
 
 export const generateMetadata = () => ({
   title: "John Doll | Amazon (2021)",
@@ -30,6 +31,7 @@ function Story({ paragraphs }: { paragraphs: string[] }) {
 export default function Amazon2021Page() {
   return (
     <div className="flex flex-1 justify-center p-6 md:p-10">
+      <GroupPager group="experience" current="/experience/amazon2021" />
       <article className="w-full max-w-6xl space-y-8">
       <header className="space-y-3 text-center">
         <h1 className="text-3xl font-bold md:text-4xl">Amazon (2021)</h1>

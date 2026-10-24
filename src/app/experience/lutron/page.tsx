@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GroupPager } from "../../../components/group-pager/GroupPager";
 
 export const generateMetadata = () => {
     return {
@@ -10,6 +11,7 @@ export const generateMetadata = () => {
 export default function Home() {
   return (
     <div className="flex flex-1 justify-center p-6 md:p-10">
+      <GroupPager group="experience" current="/experience/lutron" />
       <article className="w-full max-w-6xl space-y-8">
         <header className="space-y-3 text-center">
           <h1 className="text-3xl font-bold md:text-4xl">Lutron</h1>
