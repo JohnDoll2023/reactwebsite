@@ -4,6 +4,7 @@ import { GroupPager } from "../../../components/group-pager/GroupPager";
 export const generateMetadata = () => {
   return {
     title: "John Doll | Checkers",
+    description: "John Doll’s browser-based checkers game project.",
   };
 };
 
@@ -46,7 +47,7 @@ export default function Home() {
             muted
             className="aspect-video h-auto w-full rounded-2xl border border-white/10 bg-slate-950/85 object-cover shadow-sm xl:h-full xl:aspect-auto"
           >
-            <source src="/projects/checkers/checkers.mov" type="video/mp4" />
+            <source src="/projects/checkers/checkers.mp4" type="video/mp4" />
             Your browser does not support HTML video.
           </video>
           <Image

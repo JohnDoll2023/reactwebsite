@@ -4,6 +4,7 @@ import Link from "next/link";
 
 export const generateMetadata = () => ({
   title: "John Doll | Amazon (2022)",
+  description: "John Doll’s 2022 Amazon software development internship working on Android applications and machine learning projects.",
 });
 
 const professionalStory = [

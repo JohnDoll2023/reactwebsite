@@ -1,6 +1,7 @@
 export const generateMetadata = () => {
     return {
-      title: 'John Doll | Resume',
+      title: 'John Doll | DJ',
+      description: 'John Doll’s DJ projects, music, and event experience.',
     };
   };
 

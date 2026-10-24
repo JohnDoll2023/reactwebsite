@@ -5,6 +5,7 @@ import { GroupPager } from "../../../components/group-pager/GroupPager";
 export const generateMetadata = () => {
     return {
       title: "John Doll | Website 3.0",
+      description: "John Doll’s current terminal-inspired personal website built with React, Next.js, Tailwind CSS, and TypeScript.",
     };
 };
 

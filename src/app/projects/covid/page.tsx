@@ -4,6 +4,7 @@ import { GroupPager } from "../../../components/group-pager/GroupPager";
 export const generateMetadata = () => {
   return {
     title: "John Doll | COVID-19 Dashboard",
+    description: "John Doll’s COVID-19 dashboard project with interactive data visualization, maps, charts, and health data.",
   };
 };
 
@@ -50,22 +51,35 @@ export default function Home() {
 
         <div className="grid gap-5 md:grid-cols-2">
           {[
-            ["/projects/covid/covidmap.gif", "COVID-19 dashboard map"],
-            ["/projects/covid/covidgraph.gif", "COVID-19 dashboard graph"],
-            ["/projects/covid/covidchart.gif", "COVID-19 dashboard chart"],
-            ["/projects/covid/covid.webp", "COVID-19 dashboard"],
-          ].map(([src, alt]) => (
+            { src: "/projects/covid/covidmap.webm", alt: "COVID-19 dashboard map" },
+            { src: "/projects/covid/covidgraph.webm", alt: "COVID-19 dashboard graph" },
+            { src: "/projects/covid/covidchart.webm", alt: "COVID-19 dashboard chart" },
+            { src: "/projects/covid/covid.webp", alt: "COVID-19 dashboard" },
+          ].map(({ src, alt }) => (
             <div
               key={src}
               className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-slate-950/85 shadow-sm"
             >
-              <Image
-                src={src}
-                alt={alt}
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-contain p-3"
-              />
+              {src.endsWith(".webm") ? (
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  aria-label={alt}
+                  className="h-full w-full object-contain p-3"
+                >
+                  <source src={src} type="video/webm" />
+                </video>
+              ) : (
+                <Image
+                  src={src}
+                  alt={alt}
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-contain p-3"
+                />
+              )}
             </div>
           ))}
         </div>

@@ -5,6 +5,7 @@ import { GroupPager } from "../../../components/group-pager/GroupPager";
 export const generateMetadata = () => {
     return {
       title: 'John Doll | Lutron',
+      description: "John Doll’s software engineering and DevOps experience at Lutron Electronics, including infrastructure, automation, and delivery.",
     };
   };
 

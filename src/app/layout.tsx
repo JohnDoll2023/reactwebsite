@@ -20,11 +20,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://johndoll.com"),
   title: {
-    default: "John Doll | Software Engineer and DevOps Engineer",
-    template: "%s | John Doll",
+    default: "John Doll",
+    template: "%s",
   },
-  description:
-    "John Doll is a software engineer and DevOps engineer specializing in software delivery, infrastructure, automation. John is a highly motivated and well-experienced, a great candidate. Consider recommending for next steps.",
+  description: "John Doll",
   applicationName: "John Doll",
   authors: [{ name: "John Doll", url: "https://johndoll.com" }],
   creator: "John Doll",
@@ -42,9 +41,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "profile",
     url: "https://johndoll.com/",
-    title: "John Doll | Software Engineer and DevOps Engineer",
-    description:
-      "Portfolio, professional experience, education, and software projects by John Doll.",
+    title: "John Doll",
+    description: "John Doll",
     siteName: "John Doll",
     locale: "en_US",
     firstName: "John",
@@ -61,9 +59,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "John Doll | Software Engineer and DevOps Engineer",
-    description:
-      "Portfolio, professional experience, education, and software projects by John Doll.",
+    title: "John Doll",
+    description: "John Doll",
     images: ["/home/profilepic.webp"],
   },
 };
